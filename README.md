@@ -1,0 +1,1 @@
+This is a repository I upload my files to host it here, since this place is really good and better than most raw file hosting like catbox.moe [ I'm not saying it's bad. ] The catbox server is usually down so I use github because it rarely down :3
