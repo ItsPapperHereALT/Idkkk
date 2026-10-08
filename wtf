@@ -1,0 +1,4525 @@
+>>     "$env:USERPROFILE\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice" `
+>>     -File |
+>>     Select-Object -ExpandProperty FullName
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\ApiInfo.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\BundleKeyInfo.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\Hilt_PluginInfoProvideService.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\MessageConfig$Key.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\MessageConfig$Type.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\MessageConfig.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginData$Companion.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginData.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginDataManager$EntriesMappings.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginDataManager$WhenMappings.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginDataManager.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService$Companion.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService$mMessageHandler$1.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService$startRuntimeUpdateCheck$1.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService_GeneratedInjector.smali
+C:\Users\tiohm\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService_MembersInjector.smali
+PS C:\Users\tiohm> Get-Content `
+>>     "$env:USERPROFILE\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice\PluginInfoProvideService.smali"
+.class public final Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;
+.super Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;
+.source "r8-map-id-fa253a8a4cf9f38c46c707fe7817075eb81b65c5edda59cb10e039a081bd4345"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u008a\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u0011\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0007\u0018\u0000 G2\u00020\u0001:\u0001GB\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J+\u0010\u000b\u001a\u00020\n2\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0008\u0010\t\u001a\u0004\u0018\u00010\u0008H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u0017\u0010\r\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0008H\u0002\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0019\u0010\u000f\u001a\u00020\n2\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u001d\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J%\u0010\u0019\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u00112\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u001d\u0010\u001c\u001a\u00020\u001b2\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ%\u0010\u001e\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u00112\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u001e\u0010\u001aJ\u001d\u0010!\u001a\u00020\u001b2\u000c\u0010 \u001a\u0008\u0012\u0004\u0012\u00020\u00140\u001fH\u0002\u00a2\u0006\u0004\u0008!\u0010\"J\'\u0010$\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00132\u0010\u0010#\u001a\u000c\u0012\u0006\u0008\u0001\u0012\u00020\u0014\u0018\u00010\u001fH\u0002\u00a2\u0006\u0004\u0008$\u0010%J\u0019\u0010)\u001a\u0004\u0018\u00010(2\u0006\u0010\'\u001a\u00020&H\u0016\u00a2\u0006\u0004\u0008)\u0010*J\u000f\u0010+\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008+\u0010\u0003R\"\u0010-\u001a\u00020,8\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u0008-\u0010.\u001a\u0004\u0008/\u00100\"\u0004\u00081\u00102R\"\u00104\u001a\u0002038\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u00084\u00105\u001a\u0004\u00086\u00107\"\u0004\u00088\u00109R\u0018\u0010;\u001a\u0004\u0018\u00010:8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008;\u0010<R\u0018\u0010>\u001a\u0004\u0018\u00010=8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008>\u0010?R*\u0010B\u001a\u0016\u0012\u0004\u0012\u00020\u0014\u0018\u00010@j\n\u0012\u0004\u0012\u00020\u0014\u0018\u0001`A8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008B\u0010CR\u0014\u0010E\u001a\u00020D8\u0002X\u0083\u0004\u00a2\u0006\u0006\n\u0004\u0008E\u0010F\u00a8\u0006H"
+    }
+    d2 = {
+        "Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;",
+        "Landroid/app/Service;",
+        "<init>",
+        "()V",
+        "Landroid/os/Messenger;",
+        "messenger",
+        "",
+        "msgId",
+        "Landroid/os/Bundle;",
+        "data",
+        "Lo9/o;",
+        "sendResult",
+        "(Landroid/os/Messenger;ILandroid/os/Bundle;)V",
+        "setPackagesToUpdateCheck",
+        "(Landroid/os/Bundle;)V",
+        "startRuntimeUpdateCheck",
+        "(Landroid/os/Messenger;)V",
+        "Landroid/os/Message;",
+        "message",
+        "",
+        "",
+        "getCallingPackageSet",
+        "(Landroid/os/Message;)Ljava/util/Set;",
+        "msg",
+        "callingPackageSet",
+        "handlePluginRemoveRequest",
+        "(Landroid/os/Message;Ljava/util/Set;)V",
+        "",
+        "isRequestedFromWearableManager",
+        "(Ljava/util/Set;)Z",
+        "handleDeviceRemoveRequest",
+        "",
+        "packageList",
+        "removePluginInternal",
+        "([Ljava/lang/String;)Z",
+        "addressList",
+        "removeDeviceProcess",
+        "([Ljava/lang/String;)Ljava/util/Set;",
+        "Landroid/content/Intent;",
+        "intent",
+        "Landroid/os/IBinder;",
+        "onBind",
+        "(Landroid/content/Intent;)Landroid/os/IBinder;",
+        "onCreate",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "pluginUsageTracker",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "getPluginUsageTracker",
+        "()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "setPluginUsageTracker",
+        "(Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;)V",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "launchHistoryTracker",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "getLaunchHistoryTracker",
+        "()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "setLaunchHistoryTracker",
+        "(Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;)V",
+        "Landroid/content/Context;",
+        "context",
+        "Landroid/content/Context;",
+        "Lcom/samsung/android/app/twatchmanager/update/UpdateManager;",
+        "updateManager",
+        "Lcom/samsung/android/app/twatchmanager/update/UpdateManager;",
+        "Ljava/util/ArrayList;",
+        "Lkotlin/collections/ArrayList;",
+        "requestPackages",
+        "Ljava/util/ArrayList;",
+        "Landroid/os/Handler;",
+        "mMessageHandler",
+        "Landroid/os/Handler;",
+        "Companion",
+        "ThinUnifiedHostManager_wmanagerRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x2,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+.field private static final TAG:Ljava/lang/String;
+
+
+# instance fields
+.field private context:Landroid/content/Context;
+
+.field public launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+.field private final mMessageHandler:Landroid/os/Handler;
+
+.field public pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+.field private requestPackages:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    .line 1
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, v1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;-><init>(Lda/e;)V
+
+    .line 5
+    .line 6
+    .line 7
+    sput-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->Companion:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+    .line 8
+    .line 9
+    const-class v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;
+
+    .line 10
+    .line 11
+    sget-object v1, Lda/u;->a:Lda/v;
+
+    .line 12
+    .line 13
+    invoke-virtual {v1, v0}, Lda/v;->b(Ljava/lang/Class;)Lja/c;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-interface {v0}, Lja/c;->p()Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    sput-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$mMessageHandler$1;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$mMessageHandler$1;-><init>(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->mMessageHandler:Landroid/os/Handler;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public static final synthetic access$getCallingPackageSet(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;)Ljava/util/Set;
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getCallingPackageSet(Landroid/os/Message;)Ljava/util/Set;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method
+
+.method public static final synthetic access$getContext$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Landroid/content/Context;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$getRequestPackages$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Ljava/util/ArrayList;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$getTAG$cp()Ljava/lang/String;
+    .registers 1
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public static final synthetic access$getUpdateManager$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$handleDeviceRemoveRequest(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;Ljava/util/Set;)V
+    .registers 3
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->handleDeviceRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$handlePluginRemoveRequest(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;Ljava/util/Set;)V
+    .registers 3
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->handlePluginRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$sendResult(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;ILandroid/os/Bundle;)V
+    .registers 4
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$setPackagesToUpdateCheck(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Bundle;)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->setPackagesToUpdateCheck(Landroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$startRuntimeUpdateCheck(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->startRuntimeUpdateCheck(Landroid/os/Messenger;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method private final getCallingPackageSet(Landroid/os/Message;)Ljava/util/Set;
+    .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "get package set from message.sendingUid : "
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    new-instance v2, Ljava/util/HashSet;
+
+    .line 8
+    .line 9
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    const/4 v3, 0x0
+
+    .line 13
+    if-eqz v1, :cond_14
+
+    .line 14
+    .line 15
+    const-string v4, "from"
+
+    .line 16
+    .line 17
+    invoke-virtual {v1, v4, v3}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v3
+
+    .line 21
+    :cond_14
+    const-string v1, "getCallingPackageSet"
+
+    .line 22
+    .line 23
+    if-eqz v3, :cond_2d
+
+    .line 24
+    .line 25
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v4
+
+    .line 29
+    if-nez v4, :cond_1f
+
+    .line 30
+    .line 31
+    goto :goto_2d
+
+    .line 32
+    :cond_1f
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 33
+    .line 34
+    const-string v5, "has from value : "
+
+    .line 35
+    .line 36
+    invoke-virtual {v5, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v5
+
+    .line 40
+    invoke-static {v4, v1, v5}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 41
+    .line 42
+    .line 43
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 44
+    .line 45
+    .line 46
+    :cond_2d
+    :goto_2d
+    :try_start_2d
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v3
+
+    .line 50
+    iget p1, p1, Landroid/os/Message;->sendingUid:I
+
+    .line 51
+    .line 52
+    invoke-virtual {v3, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object p1
+
+    .line 56
+    if-eqz p1, :cond_3f
+
+    .line 57
+    .line 58
+    invoke-static {v2, p1}, Lp9/q;->p0(Ljava/util/Collection;[Ljava/lang/Object;)V
+
+    .line 59
+    .line 60
+    .line 61
+    goto :goto_3f
+
+    .line 62
+    :catchall_3d
+    move-exception p1
+
+    .line 63
+    goto :goto_53
+
+    .line 64
+    :cond_3f
+    :goto_3f
+    sget-object p1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 65
+    .line 66
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 67
+    .line 68
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 69
+    .line 70
+    .line 71
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v0
+
+    .line 78
+    invoke-static {p1, v1, v0}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    sget-object p1, Lo9/o;->a:Lo9/o;
+    :try_end_52
+    .catchall {:try_start_2d .. :try_end_52} :catchall_3d
+
+    .line 82
+    .line 83
+    goto :goto_57
+
+    .line 84
+    :goto_53
+    invoke-static {p1}, Lfd/k;->n(Ljava/lang/Throwable;)Lo9/i;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object p1
+
+    .line 88
+    :goto_57
+    invoke-static {p1}, Lo9/j;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object p1
+
+    .line 92
+    if-eqz p1, :cond_64
+
+    .line 93
+    .line 94
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 95
+    .line 96
+    const-string v3, "can\'t get the calling packages from uid, "
+
+    .line 97
+    .line 98
+    invoke-static {v3, p1, v0, v1}, La0/a;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 99
+    .line 100
+    .line 101
+    :cond_64
+    return-object v2
+.end method
+
+.method private final handleDeviceRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->isRequestedFromWearableManager(Ljava/util/Set;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p2
+
+    .line 5
+    if-eqz p2, :cond_62
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p2
+
+    .line 11
+    const-string v0, "remove_device_list"
+
+    .line 12
+    .line 13
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p2
+
+    .line 17
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removeDeviceProcess([Ljava/lang/String;)Ljava/util/Set;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    invoke-static {p2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object p2
+
+    .line 27
+    const-string v2, "toString(...)"
+
+    .line 28
+    .line 29
+    invoke-static {p2, v2}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 33
+    .line 34
+    const-string v3, "addressList : "
+
+    .line 35
+    .line 36
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    .line 41
+    .line 42
+    const-string p2, " removeCandidatePackages : "
+
+    .line 43
+    .line 44
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object p2
+
+    .line 54
+    const-string v2, "handleDeviceRemoveRequest"
+
+    .line 55
+    .line 56
+    invoke-static {v1, v2, p2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object p2
+
+    .line 63
+    invoke-interface {p2, v0}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->getNotUsedPluginAfterRemoveDevice(Ljava/util/Set;)Ljava/util/List;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object p2
+
+    .line 67
+    const/4 v0, 0x0
+
+    .line 68
+    new-array v0, v0, [Ljava/lang/String;
+
+    .line 69
+    .line 70
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object p2
+
+    .line 74
+    check-cast p2, [Ljava/lang/String;
+
+    .line 75
+    .line 76
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removePluginInternal([Ljava/lang/String;)Z
+
+    .line 77
+    .line 78
+    .line 79
+    new-instance p2, Landroid/os/Bundle;
+
+    .line 80
+    .line 81
+    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+
+    .line 82
+    .line 83
+    .line 84
+    const-string v0, "result"
+
+    .line 85
+    .line 86
+    const/4 v1, 0x1
+
+    .line 87
+    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 88
+    .line 89
+    .line 90
+    iget-object p1, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    .line 91
+    .line 92
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->DEVICE_REMOVE_REQUEST:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 93
+    .line 94
+    iget v0, v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 95
+    .line 96
+    invoke-direct {p0, p1, v0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 97
+    .line 98
+    .line 99
+    :cond_62
+    return-void
+.end method
+
+.method private final handlePluginRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->isRequestedFromWearableManager(Ljava/util/Set;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p2
+
+    .line 5
+    if-eqz p2, :cond_2c
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p2
+
+    .line 11
+    const-string v0, "remove_package_list"
+
+    .line 12
+    .line 13
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p2
+
+    .line 17
+    if-nez p2, :cond_15
+
+    .line 18
+    .line 19
+    const/4 p2, 0x0
+
+    .line 20
+    new-array p2, p2, [Ljava/lang/String;
+
+    .line 21
+    .line 22
+    :cond_15
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removePluginInternal([Ljava/lang/String;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result p2
+
+    .line 26
+    new-instance v0, Landroid/os/Bundle;
+
+    .line 27
+    .line 28
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    const-string v1, "result"
+
+    .line 32
+    .line 33
+    invoke-virtual {v0, v1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object p1, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    .line 37
+    .line 38
+    sget-object p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->PLUGIN_REMOVE_REQUEST:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 39
+    .line 40
+    iget p2, p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 41
+    .line 42
+    invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 43
+    .line 44
+    .line 45
+    :cond_2c
+    return-void
+.end method
+
+.method private final isRequestedFromWearableManager(Ljava/util/Set;)Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lc7/i;->a:Lc7/i;
+
+    .line 2
+    .line 3
+    sget-object v0, Lc7/i;->c:Ljava/util/HashMap;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    const-string v1, "<get-keys>(...)"
+
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v1
+
+    .line 18
+    const/4 v2, 0x0
+
+    .line 19
+    if-eqz v1, :cond_15
+
+    .line 20
+    .line 21
+    return v2
+
+    .line 22
+    :cond_15
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    :cond_19
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v1
+
+    .line 30
+    if-eqz v1, :cond_2d
+
+    .line 31
+    .line 32
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v1
+
+    .line 36
+    check-cast v1, Ljava/lang/String;
+
+    .line 37
+    .line 38
+    invoke-interface {p1, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v1
+
+    .line 42
+    if-eqz v1, :cond_19
+
+    .line 43
+    .line 44
+    const/4 p1, 0x1
+
+    .line 45
+    return p1
+
+    .line 46
+    :cond_2d
+    return v2
+.end method
+
+.method private final removeDeviceProcess([Ljava/lang/String;)Ljava/util/Set;
+    .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v2
+
+    .line 12
+    const-string v3, "toString(...)"
+
+    .line 13
+    .line 14
+    invoke-static {v2, v3}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 15
+    .line 16
+    .line 17
+    const-string v3, "addressList : "
+
+    .line 18
+    .line 19
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v2
+
+    .line 23
+    const-string v3, "removeDeviceProcess"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v3, v2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    if-eqz p1, :cond_4f
+
+    .line 29
+    .line 30
+    array-length v1, p1
+
+    .line 31
+    const/4 v2, 0x0
+
+    .line 32
+    :goto_1f
+    if-ge v2, v1, :cond_4f
+
+    .line 33
+    .line 34
+    aget-object v3, p1, v2
+
+    .line 35
+    .line 36
+    iget-object v4, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 37
+    .line 38
+    invoke-static {v4, v3}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->queryDeviceByDeviceIdRegistryData(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v4
+
+    .line 42
+    if-eqz v4, :cond_35
+
+    .line 43
+    .line 44
+    iget-object v4, v4, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->packagename:Ljava/lang/String;
+
+    .line 45
+    .line 46
+    const-string v5, "packagename"
+
+    .line 47
+    .line 48
+    invoke-static {v4, v5}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 52
+    .line 53
+    .line 54
+    :cond_35
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->INSTANCE:Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;
+
+    .line 55
+    .line 56
+    invoke-virtual {v4, v3}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->getBluetoothDevice(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v4
+
+    .line 60
+    invoke-static {v4}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->removeBond(Landroid/bluetooth/BluetoothDevice;)V
+
+    .line 61
+    .line 62
+    .line 63
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->INSTANCE:Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;
+
+    .line 64
+    .line 65
+    iget-object v5, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 66
+    .line 67
+    invoke-virtual {v4, v5, v3}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->deleteDeviceRegistryDataDeviceID(Landroid/content/Context;Ljava/lang/String;)I
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getLaunchHistoryTracker()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v4
+
+    .line 74
+    invoke-interface {v4, v3}, Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;->removeLaunchHistory(Ljava/lang/String;)V
+
+    .line 75
+    .line 76
+    .line 77
+    add-int/lit8 v2, v2, 0x1
+
+    .line 78
+    .line 79
+    goto :goto_1f
+
+    .line 80
+    :cond_4f
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object p1
+
+    .line 84
+    :goto_53
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 85
+    .line 86
+    .line 87
+    move-result v1
+
+    .line 88
+    if-eqz v1, :cond_6c
+
+    .line 89
+    .line 90
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v1
+
+    .line 94
+    const-string v2, "next(...)"
+
+    .line 95
+    .line 96
+    invoke-static {v1, v2}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 97
+    .line 98
+    .line 99
+    check-cast v1, Ljava/lang/String;
+
+    .line 100
+    .line 101
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v2
+
+    .line 105
+    invoke-interface {v2, v1}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->clearLastAccessedInfo(Ljava/lang/String;)V
+
+    .line 106
+    .line 107
+    .line 108
+    goto :goto_53
+
+    .line 109
+    :cond_6c
+    return-object v0
+.end method
+
+.method private final removePluginInternal([Ljava/lang/String;)Z
+    .registers 8
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils;->Companion:Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils$Companion;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 4
+    .line 5
+    const-string v2, "com.samsung.android.app.watchmanagerstub.permission.UNINSTALL_PACKAGE_FROM_TUHM"
+
+    .line 6
+    .line 7
+    const-string v3, "com.samsung.android.app.watchmanagerstub"
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, v1, v3, v2}, Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils$Companion;->checkPackageDefinedPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v2
+
+    .line 19
+    const-string v4, "toString(...)"
+
+    .line 20
+    .line 21
+    invoke-static {v2, v4}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    .line 25
+    .line 26
+    const-string v5, "stubRemoveSupported : "
+
+    .line 27
+    .line 28
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    const-string v5, " packageList : "
+
+    .line 35
+    .line 36
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    .line 41
+    .line 42
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v2
+
+    .line 46
+    const-string v4, "removePluginInternal"
+
+    .line 47
+    .line 48
+    invoke-static {v1, v4, v2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    array-length v1, p1
+
+    .line 52
+    const/4 v2, 0x0
+
+    .line 53
+    if-nez v1, :cond_37
+
+    .line 54
+    .line 55
+    return v2
+
+    .line 56
+    :cond_37
+    array-length v1, p1
+
+    .line 57
+    :goto_38
+    if-ge v2, v1, :cond_46
+
+    .line 58
+    .line 59
+    aget-object v4, p1, v2
+
+    .line 60
+    .line 61
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v5
+
+    .line 65
+    invoke-interface {v5, v4}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->removeAppInfo(Ljava/lang/String;)V
+
+    .line 66
+    .line 67
+    .line 68
+    add-int/lit8 v2, v2, 0x1
+
+    .line 69
+    .line 70
+    goto :goto_38
+
+    .line 71
+    :cond_46
+    if-eqz v0, :cond_5b
+
+    .line 72
+    .line 73
+    new-instance v0, Landroid/content/Intent;
+
+    .line 74
+    .line 75
+    const-string v1, "android.samsung.watchmanagerstub.UNINSTALL_PACKAGE_FROM_TUHM"
+
+    .line 76
+    .line 77
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 78
+    .line 79
+    .line 80
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 81
+    .line 82
+    .line 83
+    const-string v1, "package_name"
+
+    .line 84
+    .line 85
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 89
+    .line 90
+    .line 91
+    goto :goto_60
+
+    .line 92
+    :cond_5b
+    sget-object v0, Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;->INSTANCE:Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;
+
+    .line 93
+    .line 94
+    invoke-virtual {v0, p1}, Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;->schedule([Ljava/lang/String;)V
+
+    .line 95
+    .line 96
+    .line 97
+    :goto_60
+    const/4 p1, 0x1
+
+    .line 98
+    return p1
+.end method
+
+.method private final sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+    .registers 7
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 4
+    .line 5
+    const-string v2, "messenger : "
+
+    .line 6
+    .line 7
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    const-string v2, "sendResult"
+
+    .line 18
+    .line 19
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    const/4 v0, 0x0
+
+    .line 23
+    :try_start_16
+    invoke-static {v0, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object p2
+
+    .line 27
+    invoke-virtual {p2, p3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    .line 28
+    .line 29
+    .line 30
+    if-eqz p1, :cond_2a
+
+    .line 31
+    .line 32
+    invoke-virtual {p1, p2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    .line 33
+    .line 34
+    .line 35
+    sget-object v0, Lo9/o;->a:Lo9/o;
+    :try_end_24
+    .catchall {:try_start_16 .. :try_end_24} :catchall_25
+
+    .line 36
+    .line 37
+    goto :goto_2a
+
+    .line 38
+    :catchall_25
+    move-exception p1
+
+    .line 39
+    invoke-static {p1}, Lfd/k;->n(Ljava/lang/Throwable;)Lo9/i;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    :cond_2a
+    :goto_2a
+    invoke-static {v0}, Lo9/j;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object p1
+
+    .line 47
+    if-eqz p1, :cond_37
+
+    .line 48
+    .line 49
+    sget-object p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 50
+    .line 51
+    const-string p3, "error : "
+
+    .line 52
+    .line 53
+    invoke-static {p3, p1, p2, v2}, La0/a;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 54
+    .line 55
+    .line 56
+    :cond_37
+    return-void
+.end method
+
+.method private final setPackagesToUpdateCheck(Landroid/os/Bundle;)V
+    .registers 7
+
+    .line 1
+    const-string v0, "request_package"
+
+    .line 2
+    .line 3
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v1
+
+    .line 7
+    const-string v2, "setPackagesToUpdateCheck"
+
+    .line 8
+    .line 9
+    if-eqz v1, :cond_30
+
+    .line 10
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p1
+
+    .line 15
+    if-eqz p1, :cond_a5
+
+    .line 16
+    .line 17
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 18
+    .line 19
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const-string v3, "toString(...)"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v3}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    const-string v3, "parameter : request_package, packageList : "
+
+    .line 29
+    .line 30
+    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v1
+
+    .line 34
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    new-instance v0, Ljava/util/ArrayList;
+
+    .line 38
+    .line 39
+    invoke-static {p1}, Lp9/h;->h0([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object p1
+
+    .line 43
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 44
+    .line 45
+    .line 46
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 47
+    .line 48
+    return-void
+
+    .line 49
+    :cond_30
+    const-string v0, "target_address"
+
+    .line 50
+    .line 51
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    .line 52
+    .line 53
+    .line 54
+    move-result v1
+
+    .line 55
+    if-eqz v1, :cond_a5
+
+    .line 56
+    .line 57
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 58
+    .line 59
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 60
+    .line 61
+    .line 62
+    iput-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 63
+    .line 64
+    const-string v3, "com.samsung.android.app.watchmanager"
+
+    .line 65
+    .line 66
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 67
+    .line 68
+    .line 69
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object p1
+
+    .line 73
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 74
+    .line 75
+    invoke-static {v0, p1}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->queryDeviceByDeviceIdRegistryData(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object p1
+
+    .line 79
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 80
+    .line 81
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 82
+    .line 83
+    const-string v3, "parameter : target_address, device exists : "
+
+    .line 84
+    .line 85
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 89
+    .line 90
+    .line 91
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 92
+    .line 93
+    .line 94
+    move-result-object v1
+
+    .line 95
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 96
+    .line 97
+    .line 98
+    if-eqz p1, :cond_a5
+
+    .line 99
+    .line 100
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 101
+    .line 102
+    if-eqz v1, :cond_6c
+
+    .line 103
+    .line 104
+    iget-object v3, p1, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->packagename:Ljava/lang/String;
+
+    .line 105
+    .line 106
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 107
+    .line 108
+    .line 109
+    :cond_6c
+    iget-object p1, p1, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->deviceFixedName:Ljava/lang/String;
+
+    .line 110
+    .line 111
+    invoke-static {p1}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->getSimpleBTNameByName(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object p1
+
+    .line 115
+    sget-object v1, Lc7/i;->a:Lc7/i;
+
+    .line 116
+    .line 117
+    invoke-static {p1}, Lc7/i;->b(Ljava/lang/String;)Lc7/h;
+
+    .line 118
+    .line 119
+    .line 120
+    move-result-object p1
+
+    .line 121
+    if-eqz p1, :cond_7e
+
+    .line 122
+    .line 123
+    iget-object p1, p1, Lc7/h;->f:Lc7/f;
+
+    .line 124
+    .line 125
+    if-nez p1, :cond_80
+
+    .line 126
+    .line 127
+    :cond_7e
+    sget-object p1, Lc7/f;->h:Lc7/f;
+
+    .line 128
+    .line 129
+    :cond_80
+    sget-object v1, Lc7/f;->m:Lc7/f;
+
+    .line 130
+    .line 131
+    if-ne p1, v1, :cond_86
+
+    .line 132
+    .line 133
+    const/4 p1, 0x1
+
+    .line 134
+    goto :goto_87
+
+    .line 135
+    :cond_86
+    const/4 p1, 0x0
+
+    .line 136
+    :goto_87
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 137
+    .line 138
+    invoke-static {v1}, Lcom/samsung/android/app/global/utils/GoogleRequirementUtils;->isChinaEdition(Landroid/content/Context;)Z
+
+    .line 139
+    .line 140
+    .line 141
+    move-result v1
+
+    .line 142
+    const-string v3, "parameter : target_address, isNeedGMS : "
+
+    .line 143
+    .line 144
+    const-string v4, " isChinaModel : "
+
+    .line 145
+    .line 146
+    invoke-static {v3, p1, v4, v1}, La0/a;->l(Ljava/lang/String;ZLjava/lang/String;Z)Ljava/lang/String;
+
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v3
+
+    .line 150
+    invoke-static {v0, v2, v3}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 151
+    .line 152
+    .line 153
+    if-eqz p1, :cond_a5
+
+    .line 154
+    .line 155
+    if-eqz v1, :cond_a5
+
+    .line 156
+    .line 157
+    iget-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 158
+    .line 159
+    if-eqz p1, :cond_a5
+
+    .line 160
+    .line 161
+    const-string v0, "com.google.android.wearable.app.cn"
+
+    .line 162
+    .line 163
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 164
+    .line 165
+    .line 166
+    :cond_a5
+    return-void
+.end method
+
+.method private final startRuntimeUpdateCheck(Landroid/os/Messenger;)V
+    .registers 6
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 4
+    .line 5
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 6
+    .line 7
+    const-string v3, "RUNTIME_UPDATE_CHECK, messenger : "
+
+    .line 8
+    .line 9
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    .line 15
+    const-string v3, " mRequestPackages : "
+
+    .line 16
+    .line 17
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    const-string v2, "startRuntimeUpdateCheck"
+
+    .line 28
+    .line 29
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 33
+    .line 34
+    if-eqz v0, :cond_46
+
+    .line 35
+    .line 36
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    if-eqz v0, :cond_2a
+
+    .line 41
+    .line 42
+    goto :goto_46
+
+    .line 43
+    :cond_2a
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 44
+    .line 45
+    if-eqz v0, :cond_31
+
+    .line 46
+    .line 47
+    invoke-virtual {v0}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;->release()V
+
+    .line 48
+    .line 49
+    .line 50
+    :cond_31
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 51
+    .line 52
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 53
+    .line 54
+    new-instance v2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$startRuntimeUpdateCheck$1;
+
+    .line 55
+    .line 56
+    invoke-direct {v2, p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$startRuntimeUpdateCheck$1;-><init>(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;)V
+
+    .line 57
+    .line 58
+    .line 59
+    const/4 p1, 0x0
+
+    .line 60
+    invoke-direct {v0, v1, v2, p1}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;-><init>(Landroid/content/Context;Lcom/samsung/android/app/twatchmanager/update/UpdateManager$IUpdateManagerCallback;Z)V
+
+    .line 61
+    .line 62
+    .line 63
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 64
+    .line 65
+    iget-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 66
+    .line 67
+    invoke-virtual {v0, p1}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;->startRuntimeUpdateChecking(Ljava/util/ArrayList;)V
+
+    .line 68
+    .line 69
+    .line 70
+    return-void
+
+    .line 71
+    :cond_46
+    :goto_46
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RUNTIME_UPDATE_CHECK:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 72
+    .line 73
+    iget v0, v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 74
+    .line 75
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;->INSTANCE:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;
+
+    .line 76
+    .line 77
+    const/4 v2, 0x0
+
+    .line 78
+    invoke-virtual {v1, v2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;->getRuntimeUpdateCheckResult(Ljava/util/ArrayList;)Landroid/os/Bundle;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
+
+    .line 82
+    invoke-direct {p0, p1, v0, v1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 83
+    .line 84
+    .line 85
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getLaunchHistoryTracker()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_5
+
+    .line 4
+    .line 5
+    return-object v0
+
+    .line 6
+    :cond_5
+    const-string v0, "launchHistoryTracker"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lda/i;->k(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    throw v0
+.end method
+
+.method public final getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_5
+
+    .line 4
+    .line 5
+    return-object v0
+
+    .line 6
+    :cond_5
+    const-string v0, "pluginUsageTracker"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lda/i;->k(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    throw v0
+.end method
+
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .registers 5
+
+    .line 1
+    const-string v0, "intent"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object p1
+
+    .line 10
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    const-string v2, "onBind : "
+
+    .line 15
+    .line 16
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object p1
+
+    .line 26
+    invoke-static {v0, p1}, La7/b;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 27
+    .line 28
+    .line 29
+    new-instance p1, Landroid/os/Messenger;
+
+    .line 30
+    .line 31
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->mMessageHandler:Landroid/os/Handler;
+
+    .line 32
+    .line 33
+    invoke-direct {p1, v0}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object p1
+
+    .line 40
+    return-object p1
+.end method
+
+.method public onCreate()V
+    .registers 3
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;->onCreate()V
+
+    .line 2
+    .line 3
+    .line 4
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    const-string v1, "onCreate"
+
+    .line 7
+    .line 8
+    invoke-static {v0, v1}, La7/b;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    iput-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public final setLaunchHistoryTracker(Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;)V
+    .registers 3
+
+    .line 1
+    const-string v0, "<set-?>"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public final setPluginUsageTracker(Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;)V
+    .registers 3
+
+    .line 1
+    const-string v0, "<set-?>"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+PS C:\Users\tiohm> Get-ChildItem `
+>>     "$env:USERPROFILE\Desktop\watchmanager-baksmali\com\samsung\android\app\twatchmanager\plugininfoservice" `
+>>     -File |
+>>     Where-Object { $_.Name -like "PluginInfoProvideService.smali" } |
+>>     Get-Content
+.class public final Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;
+.super Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;
+.source "r8-map-id-fa253a8a4cf9f38c46c707fe7817075eb81b65c5edda59cb10e039a081bd4345"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u008a\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010#\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u0011\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0007\u0018\u0000 G2\u00020\u0001:\u0001GB\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J+\u0010\u000b\u001a\u00020\n2\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0008\u0010\t\u001a\u0004\u0018\u00010\u0008H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u0017\u0010\r\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0008H\u0002\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0019\u0010\u000f\u001a\u00020\n2\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u001d\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J%\u0010\u0019\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u00112\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u001d\u0010\u001c\u001a\u00020\u001b2\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ%\u0010\u001e\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u00112\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u0013H\u0002\u00a2\u0006\u0004\u0008\u001e\u0010\u001aJ\u001d\u0010!\u001a\u00020\u001b2\u000c\u0010 \u001a\u0008\u0012\u0004\u0012\u00020\u00140\u001fH\u0002\u00a2\u0006\u0004\u0008!\u0010\"J\'\u0010$\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u00132\u0010\u0010#\u001a\u000c\u0012\u0006\u0008\u0001\u0012\u00020\u0014\u0018\u00010\u001fH\u0002\u00a2\u0006\u0004\u0008$\u0010%J\u0019\u0010)\u001a\u0004\u0018\u00010(2\u0006\u0010\'\u001a\u00020&H\u0016\u00a2\u0006\u0004\u0008)\u0010*J\u000f\u0010+\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008+\u0010\u0003R\"\u0010-\u001a\u00020,8\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u0008-\u0010.\u001a\u0004\u0008/\u00100\"\u0004\u00081\u00102R\"\u00104\u001a\u0002038\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u00084\u00105\u001a\u0004\u00086\u00107\"\u0004\u00088\u00109R\u0018\u0010;\u001a\u0004\u0018\u00010:8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008;\u0010<R\u0018\u0010>\u001a\u0004\u0018\u00010=8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008>\u0010?R*\u0010B\u001a\u0016\u0012\u0004\u0012\u00020\u0014\u0018\u00010@j\n\u0012\u0004\u0012\u00020\u0014\u0018\u0001`A8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008B\u0010CR\u0014\u0010E\u001a\u00020D8\u0002X\u0083\u0004\u00a2\u0006\u0006\n\u0004\u0008E\u0010F\u00a8\u0006H"
+    }
+    d2 = {
+        "Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;",
+        "Landroid/app/Service;",
+        "<init>",
+        "()V",
+        "Landroid/os/Messenger;",
+        "messenger",
+        "",
+        "msgId",
+        "Landroid/os/Bundle;",
+        "data",
+        "Lo9/o;",
+        "sendResult",
+        "(Landroid/os/Messenger;ILandroid/os/Bundle;)V",
+        "setPackagesToUpdateCheck",
+        "(Landroid/os/Bundle;)V",
+        "startRuntimeUpdateCheck",
+        "(Landroid/os/Messenger;)V",
+        "Landroid/os/Message;",
+        "message",
+        "",
+        "",
+        "getCallingPackageSet",
+        "(Landroid/os/Message;)Ljava/util/Set;",
+        "msg",
+        "callingPackageSet",
+        "handlePluginRemoveRequest",
+        "(Landroid/os/Message;Ljava/util/Set;)V",
+        "",
+        "isRequestedFromWearableManager",
+        "(Ljava/util/Set;)Z",
+        "handleDeviceRemoveRequest",
+        "",
+        "packageList",
+        "removePluginInternal",
+        "([Ljava/lang/String;)Z",
+        "addressList",
+        "removeDeviceProcess",
+        "([Ljava/lang/String;)Ljava/util/Set;",
+        "Landroid/content/Intent;",
+        "intent",
+        "Landroid/os/IBinder;",
+        "onBind",
+        "(Landroid/content/Intent;)Landroid/os/IBinder;",
+        "onCreate",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "pluginUsageTracker",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "getPluginUsageTracker",
+        "()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;",
+        "setPluginUsageTracker",
+        "(Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;)V",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "launchHistoryTracker",
+        "Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "getLaunchHistoryTracker",
+        "()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;",
+        "setLaunchHistoryTracker",
+        "(Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;)V",
+        "Landroid/content/Context;",
+        "context",
+        "Landroid/content/Context;",
+        "Lcom/samsung/android/app/twatchmanager/update/UpdateManager;",
+        "updateManager",
+        "Lcom/samsung/android/app/twatchmanager/update/UpdateManager;",
+        "Ljava/util/ArrayList;",
+        "Lkotlin/collections/ArrayList;",
+        "requestPackages",
+        "Ljava/util/ArrayList;",
+        "Landroid/os/Handler;",
+        "mMessageHandler",
+        "Landroid/os/Handler;",
+        "Companion",
+        "ThinUnifiedHostManager_wmanagerRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x2,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+.field private static final TAG:Ljava/lang/String;
+
+
+# instance fields
+.field private context:Landroid/content/Context;
+
+.field public launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+.field private final mMessageHandler:Landroid/os/Handler;
+
+.field public pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+.field private requestPackages:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    .line 1
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, v1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;-><init>(Lda/e;)V
+
+    .line 5
+    .line 6
+    .line 7
+    sput-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->Companion:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$Companion;
+
+    .line 8
+    .line 9
+    const-class v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;
+
+    .line 10
+    .line 11
+    sget-object v1, Lda/u;->a:Lda/v;
+
+    .line 12
+    .line 13
+    invoke-virtual {v1, v0}, Lda/v;->b(Ljava/lang/Class;)Lja/c;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    invoke-interface {v0}, Lja/c;->p()Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    sput-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$mMessageHandler$1;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$mMessageHandler$1;-><init>(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->mMessageHandler:Landroid/os/Handler;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public static final synthetic access$getCallingPackageSet(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;)Ljava/util/Set;
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getCallingPackageSet(Landroid/os/Message;)Ljava/util/Set;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method
+
+.method public static final synthetic access$getContext$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Landroid/content/Context;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$getRequestPackages$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Ljava/util/ArrayList;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$getTAG$cp()Ljava/lang/String;
+    .registers 1
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public static final synthetic access$getUpdateManager$p(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;)Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic access$handleDeviceRemoveRequest(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;Ljava/util/Set;)V
+    .registers 3
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->handleDeviceRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$handlePluginRemoveRequest(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Message;Ljava/util/Set;)V
+    .registers 3
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->handlePluginRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$sendResult(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;ILandroid/os/Bundle;)V
+    .registers 4
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$setPackagesToUpdateCheck(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Bundle;)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->setPackagesToUpdateCheck(Landroid/os/Bundle;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static final synthetic access$startRuntimeUpdateCheck(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->startRuntimeUpdateCheck(Landroid/os/Messenger;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method private final getCallingPackageSet(Landroid/os/Message;)Ljava/util/Set;
+    .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "get package set from message.sendingUid : "
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    new-instance v2, Ljava/util/HashSet;
+
+    .line 8
+    .line 9
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    const/4 v3, 0x0
+
+    .line 13
+    if-eqz v1, :cond_14
+
+    .line 14
+    .line 15
+    const-string v4, "from"
+
+    .line 16
+    .line 17
+    invoke-virtual {v1, v4, v3}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v3
+
+    .line 21
+    :cond_14
+    const-string v1, "getCallingPackageSet"
+
+    .line 22
+    .line 23
+    if-eqz v3, :cond_2d
+
+    .line 24
+    .line 25
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    .line 26
+    .line 27
+    .line 28
+    move-result v4
+
+    .line 29
+    if-nez v4, :cond_1f
+
+    .line 30
+    .line 31
+    goto :goto_2d
+
+    .line 32
+    :cond_1f
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 33
+    .line 34
+    const-string v5, "has from value : "
+
+    .line 35
+    .line 36
+    invoke-virtual {v5, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v5
+
+    .line 40
+    invoke-static {v4, v1, v5}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 41
+    .line 42
+    .line 43
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 44
+    .line 45
+    .line 46
+    :cond_2d
+    :goto_2d
+    :try_start_2d
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    .line 47
+    .line 48
+    .line 49
+    move-result-object v3
+
+    .line 50
+    iget p1, p1, Landroid/os/Message;->sendingUid:I
+
+    .line 51
+    .line 52
+    invoke-virtual {v3, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    .line 53
+    .line 54
+    .line 55
+    move-result-object p1
+
+    .line 56
+    if-eqz p1, :cond_3f
+
+    .line 57
+    .line 58
+    invoke-static {v2, p1}, Lp9/q;->p0(Ljava/util/Collection;[Ljava/lang/Object;)V
+
+    .line 59
+    .line 60
+    .line 61
+    goto :goto_3f
+
+    .line 62
+    :catchall_3d
+    move-exception p1
+
+    .line 63
+    goto :goto_53
+
+    .line 64
+    :cond_3f
+    :goto_3f
+    sget-object p1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 65
+    .line 66
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 67
+    .line 68
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 69
+    .line 70
+    .line 71
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 72
+    .line 73
+    .line 74
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v0
+
+    .line 78
+    invoke-static {p1, v1, v0}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    sget-object p1, Lo9/o;->a:Lo9/o;
+    :try_end_52
+    .catchall {:try_start_2d .. :try_end_52} :catchall_3d
+
+    .line 82
+    .line 83
+    goto :goto_57
+
+    .line 84
+    :goto_53
+    invoke-static {p1}, Lfd/k;->n(Ljava/lang/Throwable;)Lo9/i;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object p1
+
+    .line 88
+    :goto_57
+    invoke-static {p1}, Lo9/j;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    .line 89
+    .line 90
+    .line 91
+    move-result-object p1
+
+    .line 92
+    if-eqz p1, :cond_64
+
+    .line 93
+    .line 94
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 95
+    .line 96
+    const-string v3, "can\'t get the calling packages from uid, "
+
+    .line 97
+    .line 98
+    invoke-static {v3, p1, v0, v1}, La0/a;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 99
+    .line 100
+    .line 101
+    :cond_64
+    return-object v2
+.end method
+
+.method private final handleDeviceRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->isRequestedFromWearableManager(Ljava/util/Set;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p2
+
+    .line 5
+    if-eqz p2, :cond_62
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p2
+
+    .line 11
+    const-string v0, "remove_device_list"
+
+    .line 12
+    .line 13
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p2
+
+    .line 17
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removeDeviceProcess([Ljava/lang/String;)Ljava/util/Set;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v0
+
+    .line 21
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 22
+    .line 23
+    invoke-static {p2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object p2
+
+    .line 27
+    const-string v2, "toString(...)"
+
+    .line 28
+    .line 29
+    invoke-static {p2, v2}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 33
+    .line 34
+    const-string v3, "addressList : "
+
+    .line 35
+    .line 36
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    .line 41
+    .line 42
+    const-string p2, " removeCandidatePackages : "
+
+    .line 43
+    .line 44
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object p2
+
+    .line 54
+    const-string v2, "handleDeviceRemoveRequest"
+
+    .line 55
+    .line 56
+    invoke-static {v1, v2, p2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 57
+    .line 58
+    .line 59
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object p2
+
+    .line 63
+    invoke-interface {p2, v0}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->getNotUsedPluginAfterRemoveDevice(Ljava/util/Set;)Ljava/util/List;
+
+    .line 64
+    .line 65
+    .line 66
+    move-result-object p2
+
+    .line 67
+    const/4 v0, 0x0
+
+    .line 68
+    new-array v0, v0, [Ljava/lang/String;
+
+    .line 69
+    .line 70
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object p2
+
+    .line 74
+    check-cast p2, [Ljava/lang/String;
+
+    .line 75
+    .line 76
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removePluginInternal([Ljava/lang/String;)Z
+
+    .line 77
+    .line 78
+    .line 79
+    new-instance p2, Landroid/os/Bundle;
+
+    .line 80
+    .line 81
+    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+
+    .line 82
+    .line 83
+    .line 84
+    const-string v0, "result"
+
+    .line 85
+    .line 86
+    const/4 v1, 0x1
+
+    .line 87
+    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 88
+    .line 89
+    .line 90
+    iget-object p1, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    .line 91
+    .line 92
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->DEVICE_REMOVE_REQUEST:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 93
+    .line 94
+    iget v0, v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 95
+    .line 96
+    invoke-direct {p0, p1, v0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 97
+    .line 98
+    .line 99
+    :cond_62
+    return-void
+.end method
+
+.method private final handlePluginRemoveRequest(Landroid/os/Message;Ljava/util/Set;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/Message;",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->isRequestedFromWearableManager(Ljava/util/Set;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p2
+
+    .line 5
+    if-eqz p2, :cond_2c
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object p2
+
+    .line 11
+    const-string v0, "remove_package_list"
+
+    .line 12
+    .line 13
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p2
+
+    .line 17
+    if-nez p2, :cond_15
+
+    .line 18
+    .line 19
+    const/4 p2, 0x0
+
+    .line 20
+    new-array p2, p2, [Ljava/lang/String;
+
+    .line 21
+    .line 22
+    :cond_15
+    invoke-direct {p0, p2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->removePluginInternal([Ljava/lang/String;)Z
+
+    .line 23
+    .line 24
+    .line 25
+    move-result p2
+
+    .line 26
+    new-instance v0, Landroid/os/Bundle;
+
+    .line 27
+    .line 28
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    const-string v1, "result"
+
+    .line 32
+    .line 33
+    invoke-virtual {v0, v1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 34
+    .line 35
+    .line 36
+    iget-object p1, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    .line 37
+    .line 38
+    sget-object p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->PLUGIN_REMOVE_REQUEST:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 39
+    .line 40
+    iget p2, p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 41
+    .line 42
+    invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 43
+    .line 44
+    .line 45
+    :cond_2c
+    return-void
+.end method
+
+.method private final isRequestedFromWearableManager(Ljava/util/Set;)Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lc7/i;->a:Lc7/i;
+
+    .line 2
+    .line 3
+    sget-object v0, Lc7/i;->c:Ljava/util/HashMap;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    const-string v1, "<get-keys>(...)"
+
+    .line 10
+    .line 11
+    invoke-static {v0, v1}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v1
+
+    .line 18
+    const/4 v2, 0x0
+
+    .line 19
+    if-eqz v1, :cond_15
+
+    .line 20
+    .line 21
+    return v2
+
+    .line 22
+    :cond_15
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    :cond_19
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v1
+
+    .line 30
+    if-eqz v1, :cond_2d
+
+    .line 31
+    .line 32
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v1
+
+    .line 36
+    check-cast v1, Ljava/lang/String;
+
+    .line 37
+    .line 38
+    invoke-interface {p1, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v1
+
+    .line 42
+    if-eqz v1, :cond_19
+
+    .line 43
+    .line 44
+    const/4 p1, 0x1
+
+    .line 45
+    return p1
+
+    .line 46
+    :cond_2d
+    return v2
+.end method
+
+.method private final removeDeviceProcess([Ljava/lang/String;)Ljava/util/Set;
+    .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 7
+    .line 8
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object v2
+
+    .line 12
+    const-string v3, "toString(...)"
+
+    .line 13
+    .line 14
+    invoke-static {v2, v3}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 15
+    .line 16
+    .line 17
+    const-string v3, "addressList : "
+
+    .line 18
+    .line 19
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v2
+
+    .line 23
+    const-string v3, "removeDeviceProcess"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v3, v2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    if-eqz p1, :cond_4f
+
+    .line 29
+    .line 30
+    array-length v1, p1
+
+    .line 31
+    const/4 v2, 0x0
+
+    .line 32
+    :goto_1f
+    if-ge v2, v1, :cond_4f
+
+    .line 33
+    .line 34
+    aget-object v3, p1, v2
+
+    .line 35
+    .line 36
+    iget-object v4, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 37
+    .line 38
+    invoke-static {v4, v3}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->queryDeviceByDeviceIdRegistryData(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v4
+
+    .line 42
+    if-eqz v4, :cond_35
+
+    .line 43
+    .line 44
+    iget-object v4, v4, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->packagename:Ljava/lang/String;
+
+    .line 45
+    .line 46
+    const-string v5, "packagename"
+
+    .line 47
+    .line 48
+    invoke-static {v4, v5}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 52
+    .line 53
+    .line 54
+    :cond_35
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->INSTANCE:Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;
+
+    .line 55
+    .line 56
+    invoke-virtual {v4, v3}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->getBluetoothDevice(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v4
+
+    .line 60
+    invoke-static {v4}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->removeBond(Landroid/bluetooth/BluetoothDevice;)V
+
+    .line 61
+    .line 62
+    .line 63
+    sget-object v4, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->INSTANCE:Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;
+
+    .line 64
+    .line 65
+    iget-object v5, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 66
+    .line 67
+    invoke-virtual {v4, v5, v3}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->deleteDeviceRegistryDataDeviceID(Landroid/content/Context;Ljava/lang/String;)I
+
+    .line 68
+    .line 69
+    .line 70
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getLaunchHistoryTracker()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v4
+
+    .line 74
+    invoke-interface {v4, v3}, Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;->removeLaunchHistory(Ljava/lang/String;)V
+
+    .line 75
+    .line 76
+    .line 77
+    add-int/lit8 v2, v2, 0x1
+
+    .line 78
+    .line 79
+    goto :goto_1f
+
+    .line 80
+    :cond_4f
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 81
+    .line 82
+    .line 83
+    move-result-object p1
+
+    .line 84
+    :goto_53
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 85
+    .line 86
+    .line 87
+    move-result v1
+
+    .line 88
+    if-eqz v1, :cond_6c
+
+    .line 89
+    .line 90
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 91
+    .line 92
+    .line 93
+    move-result-object v1
+
+    .line 94
+    const-string v2, "next(...)"
+
+    .line 95
+    .line 96
+    invoke-static {v1, v2}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 97
+    .line 98
+    .line 99
+    check-cast v1, Ljava/lang/String;
+
+    .line 100
+    .line 101
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 102
+    .line 103
+    .line 104
+    move-result-object v2
+
+    .line 105
+    invoke-interface {v2, v1}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->clearLastAccessedInfo(Ljava/lang/String;)V
+
+    .line 106
+    .line 107
+    .line 108
+    goto :goto_53
+
+    .line 109
+    :cond_6c
+    return-object v0
+.end method
+
+.method private final removePluginInternal([Ljava/lang/String;)Z
+    .registers 8
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils;->Companion:Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils$Companion;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 4
+    .line 5
+    const-string v2, "com.samsung.android.app.watchmanagerstub.permission.UNINSTALL_PACKAGE_FROM_TUHM"
+
+    .line 6
+    .line 7
+    const-string v3, "com.samsung.android.app.watchmanagerstub"
+
+    .line 8
+    .line 9
+    invoke-virtual {v0, v1, v3, v2}, Lcom/samsung/android/app/twatchmanager/util/PlatformPackageUtils$Companion;->checkPackageDefinedPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result v0
+
+    .line 13
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v2
+
+    .line 19
+    const-string v4, "toString(...)"
+
+    .line 20
+    .line 21
+    invoke-static {v2, v4}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    .line 25
+    .line 26
+    const-string v5, "stubRemoveSupported : "
+
+    .line 27
+    .line 28
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    const-string v5, " packageList : "
+
+    .line 35
+    .line 36
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    .line 41
+    .line 42
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v2
+
+    .line 46
+    const-string v4, "removePluginInternal"
+
+    .line 47
+    .line 48
+    invoke-static {v1, v4, v2}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    array-length v1, p1
+
+    .line 52
+    const/4 v2, 0x0
+
+    .line 53
+    if-nez v1, :cond_37
+
+    .line 54
+    .line 55
+    return v2
+
+    .line 56
+    :cond_37
+    array-length v1, p1
+
+    .line 57
+    :goto_38
+    if-ge v2, v1, :cond_46
+
+    .line 58
+    .line 59
+    aget-object v4, p1, v2
+
+    .line 60
+    .line 61
+    invoke-virtual {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v5
+
+    .line 65
+    invoke-interface {v5, v4}, Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;->removeAppInfo(Ljava/lang/String;)V
+
+    .line 66
+    .line 67
+    .line 68
+    add-int/lit8 v2, v2, 0x1
+
+    .line 69
+    .line 70
+    goto :goto_38
+
+    .line 71
+    :cond_46
+    if-eqz v0, :cond_5b
+
+    .line 72
+    .line 73
+    new-instance v0, Landroid/content/Intent;
+
+    .line 74
+    .line 75
+    const-string v1, "android.samsung.watchmanagerstub.UNINSTALL_PACKAGE_FROM_TUHM"
+
+    .line 76
+    .line 77
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 78
+    .line 79
+    .line 80
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 81
+    .line 82
+    .line 83
+    const-string v1, "package_name"
+
+    .line 84
+    .line 85
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 89
+    .line 90
+    .line 91
+    goto :goto_60
+
+    .line 92
+    :cond_5b
+    sget-object v0, Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;->INSTANCE:Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;
+
+    .line 93
+    .line 94
+    invoke-virtual {v0, p1}, Lcom/samsung/android/app/watchmanager/setupwizard/remove/PackageRemoveScheduler;->schedule([Ljava/lang/String;)V
+
+    .line 95
+    .line 96
+    .line 97
+    :goto_60
+    const/4 p1, 0x1
+
+    .line 98
+    return p1
+.end method
+
+.method private final sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+    .registers 7
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 4
+    .line 5
+    const-string v2, "messenger : "
+
+    .line 6
+    .line 7
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v1
+
+    .line 17
+    const-string v2, "sendResult"
+
+    .line 18
+    .line 19
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    const/4 v0, 0x0
+
+    .line 23
+    :try_start_16
+    invoke-static {v0, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object p2
+
+    .line 27
+    invoke-virtual {p2, p3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    .line 28
+    .line 29
+    .line 30
+    if-eqz p1, :cond_2a
+
+    .line 31
+    .line 32
+    invoke-virtual {p1, p2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    .line 33
+    .line 34
+    .line 35
+    sget-object v0, Lo9/o;->a:Lo9/o;
+    :try_end_24
+    .catchall {:try_start_16 .. :try_end_24} :catchall_25
+
+    .line 36
+    .line 37
+    goto :goto_2a
+
+    .line 38
+    :catchall_25
+    move-exception p1
+
+    .line 39
+    invoke-static {p1}, Lfd/k;->n(Ljava/lang/Throwable;)Lo9/i;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v0
+
+    .line 43
+    :cond_2a
+    :goto_2a
+    invoke-static {v0}, Lo9/j;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object p1
+
+    .line 47
+    if-eqz p1, :cond_37
+
+    .line 48
+    .line 49
+    sget-object p2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 50
+    .line 51
+    const-string p3, "error : "
+
+    .line 52
+    .line 53
+    invoke-static {p3, p1, p2, v2}, La0/a;->w(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 54
+    .line 55
+    .line 56
+    :cond_37
+    return-void
+.end method
+
+.method private final setPackagesToUpdateCheck(Landroid/os/Bundle;)V
+    .registers 7
+
+    .line 1
+    const-string v0, "request_package"
+
+    .line 2
+    .line 3
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v1
+
+    .line 7
+    const-string v2, "setPackagesToUpdateCheck"
+
+    .line 8
+    .line 9
+    if-eqz v1, :cond_30
+
+    .line 10
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p1
+
+    .line 15
+    if-eqz p1, :cond_a5
+
+    .line 16
+    .line 17
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 18
+    .line 19
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const-string v3, "toString(...)"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v3}, Lda/i;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 26
+    .line 27
+    .line 28
+    const-string v3, "parameter : request_package, packageList : "
+
+    .line 29
+    .line 30
+    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v1
+
+    .line 34
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    new-instance v0, Ljava/util/ArrayList;
+
+    .line 38
+    .line 39
+    invoke-static {p1}, Lp9/h;->h0([Ljava/lang/Object;)Ljava/util/List;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object p1
+
+    .line 43
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 44
+    .line 45
+    .line 46
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 47
+    .line 48
+    return-void
+
+    .line 49
+    :cond_30
+    const-string v0, "target_address"
+
+    .line 50
+    .line 51
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    .line 52
+    .line 53
+    .line 54
+    move-result v1
+
+    .line 55
+    if-eqz v1, :cond_a5
+
+    .line 56
+    .line 57
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 58
+    .line 59
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 60
+    .line 61
+    .line 62
+    iput-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 63
+    .line 64
+    const-string v3, "com.samsung.android.app.watchmanager"
+
+    .line 65
+    .line 66
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 67
+    .line 68
+    .line 69
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 70
+    .line 71
+    .line 72
+    move-result-object p1
+
+    .line 73
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 74
+    .line 75
+    invoke-static {v0, p1}, Lcom/samsung/android/app/twatchmanager/contentprovider/RegistryDbManagerWithProvider;->queryDeviceByDeviceIdRegistryData(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object p1
+
+    .line 79
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 80
+    .line 81
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 82
+    .line 83
+    const-string v3, "parameter : target_address, device exists : "
+
+    .line 84
+    .line 85
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 86
+    .line 87
+    .line 88
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 89
+    .line 90
+    .line 91
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 92
+    .line 93
+    .line 94
+    move-result-object v1
+
+    .line 95
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 96
+    .line 97
+    .line 98
+    if-eqz p1, :cond_a5
+
+    .line 99
+    .line 100
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 101
+    .line 102
+    if-eqz v1, :cond_6c
+
+    .line 103
+    .line 104
+    iget-object v3, p1, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->packagename:Ljava/lang/String;
+
+    .line 105
+    .line 106
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 107
+    .line 108
+    .line 109
+    :cond_6c
+    iget-object p1, p1, Lcom/samsung/android/app/twatchmanager/contentprovider/DeviceRegistryData;->deviceFixedName:Ljava/lang/String;
+
+    .line 110
+    .line 111
+    invoke-static {p1}, Lcom/samsung/android/app/twatchmanager/util/BluetoothApiUtil;->getSimpleBTNameByName(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object p1
+
+    .line 115
+    sget-object v1, Lc7/i;->a:Lc7/i;
+
+    .line 116
+    .line 117
+    invoke-static {p1}, Lc7/i;->b(Ljava/lang/String;)Lc7/h;
+
+    .line 118
+    .line 119
+    .line 120
+    move-result-object p1
+
+    .line 121
+    if-eqz p1, :cond_7e
+
+    .line 122
+    .line 123
+    iget-object p1, p1, Lc7/h;->f:Lc7/f;
+
+    .line 124
+    .line 125
+    if-nez p1, :cond_80
+
+    .line 126
+    .line 127
+    :cond_7e
+    sget-object p1, Lc7/f;->h:Lc7/f;
+
+    .line 128
+    .line 129
+    :cond_80
+    sget-object v1, Lc7/f;->m:Lc7/f;
+
+    .line 130
+    .line 131
+    if-ne p1, v1, :cond_86
+
+    .line 132
+    .line 133
+    const/4 p1, 0x1
+
+    .line 134
+    goto :goto_87
+
+    .line 135
+    :cond_86
+    const/4 p1, 0x0
+
+    .line 136
+    :goto_87
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 137
+    .line 138
+    invoke-static {v1}, Lcom/samsung/android/app/global/utils/GoogleRequirementUtils;->isChinaEdition(Landroid/content/Context;)Z
+
+    .line 139
+    .line 140
+    .line 141
+    move-result v1
+
+    .line 142
+    const-string v3, "parameter : target_address, isNeedGMS : "
+
+    .line 143
+    .line 144
+    const-string v4, " isChinaModel : "
+
+    .line 145
+    .line 146
+    invoke-static {v3, p1, v4, v1}, La0/a;->l(Ljava/lang/String;ZLjava/lang/String;Z)Ljava/lang/String;
+
+    .line 147
+    .line 148
+    .line 149
+    move-result-object v3
+
+    .line 150
+    invoke-static {v0, v2, v3}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 151
+    .line 152
+    .line 153
+    if-eqz p1, :cond_a5
+
+    .line 154
+    .line 155
+    if-eqz v1, :cond_a5
+
+    .line 156
+    .line 157
+    iget-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 158
+    .line 159
+    if-eqz p1, :cond_a5
+
+    .line 160
+    .line 161
+    const-string v0, "com.google.android.wearable.app.cn"
+
+    .line 162
+    .line 163
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 164
+    .line 165
+    .line 166
+    :cond_a5
+    return-void
+.end method
+
+.method private final startRuntimeUpdateCheck(Landroid/os/Messenger;)V
+    .registers 6
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 4
+    .line 5
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 6
+    .line 7
+    const-string v3, "RUNTIME_UPDATE_CHECK, messenger : "
+
+    .line 8
+    .line 9
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    .line 15
+    const-string v3, " mRequestPackages : "
+
+    .line 16
+    .line 17
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v1
+
+    .line 27
+    const-string v2, "startRuntimeUpdateCheck"
+
+    .line 28
+    .line 29
+    invoke-static {v0, v2, v1}, La7/b;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 30
+    .line 31
+    .line 32
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 33
+    .line 34
+    if-eqz v0, :cond_46
+
+    .line 35
+    .line 36
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    if-eqz v0, :cond_2a
+
+    .line 41
+    .line 42
+    goto :goto_46
+
+    .line 43
+    :cond_2a
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 44
+    .line 45
+    if-eqz v0, :cond_31
+
+    .line 46
+    .line 47
+    invoke-virtual {v0}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;->release()V
+
+    .line 48
+    .line 49
+    .line 50
+    :cond_31
+    new-instance v0, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 51
+    .line 52
+    iget-object v1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 53
+    .line 54
+    new-instance v2, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$startRuntimeUpdateCheck$1;
+
+    .line 55
+    .line 56
+    invoke-direct {v2, p0, p1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService$startRuntimeUpdateCheck$1;-><init>(Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;Landroid/os/Messenger;)V
+
+    .line 57
+    .line 58
+    .line 59
+    const/4 p1, 0x0
+
+    .line 60
+    invoke-direct {v0, v1, v2, p1}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;-><init>(Landroid/content/Context;Lcom/samsung/android/app/twatchmanager/update/UpdateManager$IUpdateManagerCallback;Z)V
+
+    .line 61
+    .line 62
+    .line 63
+    iput-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->updateManager:Lcom/samsung/android/app/twatchmanager/update/UpdateManager;
+
+    .line 64
+    .line 65
+    iget-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->requestPackages:Ljava/util/ArrayList;
+
+    .line 66
+    .line 67
+    invoke-virtual {v0, p1}, Lcom/samsung/android/app/twatchmanager/update/UpdateManager;->startRuntimeUpdateChecking(Ljava/util/ArrayList;)V
+
+    .line 68
+    .line 69
+    .line 70
+    return-void
+
+    .line 71
+    :cond_46
+    :goto_46
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RUNTIME_UPDATE_CHECK:Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;
+
+    .line 72
+    .line 73
+    iget v0, v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/MessageConfig$Type;->RESPONSE_ID:I
+
+    .line 74
+    .line 75
+    sget-object v1, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;->INSTANCE:Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;
+
+    .line 76
+    .line 77
+    const/4 v2, 0x0
+
+    .line 78
+    invoke-virtual {v1, v2}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginDataManager;->getRuntimeUpdateCheckResult(Ljava/util/ArrayList;)Landroid/os/Bundle;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
+
+    .line 82
+    invoke-direct {p0, p1, v0, v1}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->sendResult(Landroid/os/Messenger;ILandroid/os/Bundle;)V
+
+    .line 83
+    .line 84
+    .line 85
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getLaunchHistoryTracker()Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_5
+
+    .line 4
+    .line 5
+    return-object v0
+
+    .line 6
+    :cond_5
+    const-string v0, "launchHistoryTracker"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lda/i;->k(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    throw v0
+.end method
+
+.method public final getPluginUsageTracker()Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+    .registers 2
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_5
+
+    .line 4
+    .line 5
+    return-object v0
+
+    .line 6
+    :cond_5
+    const-string v0, "pluginUsageTracker"
+
+    .line 7
+    .line 8
+    invoke-static {v0}, Lda/i;->k(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    const/4 v0, 0x0
+
+    .line 12
+    throw v0
+.end method
+
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .registers 5
+
+    .line 1
+    const-string v0, "intent"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object p1
+
+    .line 10
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 13
+    .line 14
+    const-string v2, "onBind : "
+
+    .line 15
+    .line 16
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object p1
+
+    .line 26
+    invoke-static {v0, p1}, La7/b;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 27
+    .line 28
+    .line 29
+    new-instance p1, Landroid/os/Messenger;
+
+    .line 30
+    .line 31
+    iget-object v0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->mMessageHandler:Landroid/os/Handler;
+
+    .line 32
+    .line 33
+    invoke-direct {p1, v0}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object p1
+
+    .line 40
+    return-object p1
+.end method
+
+.method public onCreate()V
+    .registers 3
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/app/twatchmanager/plugininfoservice/Hilt_PluginInfoProvideService;->onCreate()V
+
+    .line 2
+    .line 3
+    .line 4
+    sget-object v0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->TAG:Ljava/lang/String;
+
+    .line 5
+    .line 6
+    const-string v1, "onCreate"
+
+    .line 7
+    .line 8
+    invoke-static {v0, v1}, La7/b;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    iput-object p0, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->context:Landroid/content/Context;
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public final setLaunchHistoryTracker(Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;)V
+    .registers 3
+
+    .line 1
+    const-string v0, "<set-?>"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->launchHistoryTracker:Lcom/samsung/android/app/watchmanager/setupwizard/history/domain/LaunchHistoryTracker;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public final setPluginUsageTracker(Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;)V
+    .registers 3
+
+    .line 1
+    const-string v0, "<set-?>"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lda/i;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, Lcom/samsung/android/app/twatchmanager/plugininfoservice/PluginInfoProvideService;->pluginUsageTracker:Lcom/samsung/android/app/watchmanager/setupwizard/appinfo/domain/PluginUsageTracker;
+
+    .line 7
+    .line 8
+    return-void
+.end method
