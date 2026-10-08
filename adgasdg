@@ -1,0 +1,574 @@
+PS C:\Users\tiohm> adb logcat -d -v time |
+>>     Select-String "FATAL EXCEPTION|AndroidRuntime|com.samsung.android.app.watchmanager|SecurityException|Process.*died|Force stopping|Killing|am_crash|am_finish|ActivityTaskManager|ActivityManager" |
+>>     Select-Object -Last 250
+
+10-08 21:21:11.689 I/tUHM:PlatformUtils(32214): isPackageOnForeground()  packageName : com.samsung.android.app.watchmanager importance(100 is foreground) : 100
+10-08 21:21:11.825 I/ActivityManager( 3177): unbindService com.android.server.am.ActiveServices@584ce31 conn=android.os.BinderProxy@98fd3d4 callingPid=4274
+10-08 21:21:11.829 I/ActivityManager( 3177): unbindService com.android.server.am.ActiveServices@584ce31 conn=android.os.BinderProxy@333fe8e callingPid=4274
+10-08 21:21:11.992 I/tUHM:PlatformUtils(32214): isPackageOnForeground()  packageName : com.samsung.android.app.watchmanager importance(100 is foreground) : 100
+10-08 21:21:12.049 W/ActivityManagerServiceImpl( 3177): Sending non-protected broadcast com.modemenhance.ACTION_MODEMWIFI_RSSI_POLL from system 4853:com.android.phone/1001 pkg com.android.phone. Callers=
+10-08 21:21:12.291 I/tUHM:PlatformUtils(32214): isPackageOnForeground()  packageName : com.samsung.android.app.watchmanager importance(100 is foreground) : 100
+10-08 21:21:12.298 D/WindowManager( 3177): Collecting in transition 1144: Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} init visibleRequested:true dc:Display{#0 state=ON
+size=1280x2772 ROTATION_0}
+10-08 21:21:12.301 I/ActivityTaskManager( 3177): moveTaskToFront: Task{3e5fae9 #2 type=home I=com.miui.home/.launcher.Launcher} caller trace:com.android.server.wm.TaskDisplayArea.onTaskMoved:461
+com.android.server.wm.Task.updateTaskMovement:1758 com.android.server.wm.TaskDisplayArea.positionChildTaskAt:425 com.android.server.wm.TaskDisplayArea.positionChildAt:386
+com.android.server.wm.WindowContainer.positionChildAt:1120 com.android.server.wm.Task.positionChildAt:3569 com.android.server.wm.Task.moveToFront:6245 com.android.server.wm.Task.moveToFront:6215
+com.android.server.wm.ActivityRecord.moveFocusableActivityToTop:4065 com.android.server.wm.TaskDisplayArea.moveHomeActivityToTop:1839
+10-08 21:21:12.302 D/MiuiFreeFormGestureController( 3177): deliverResultForFinishActivity resultTo: null resultFrom: ActivityRecord{200874612 u0
+com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} isInVideoOrGameScene: false intent: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER]
+flg=0x10200000 xflg=0x4 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity bnds=[48,49][252,253] (has extras) }
+10-08 21:21:12.303 D/WindowManager( 3177): Collecting in transition 1144: ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} init
+visibleRequested:true dc:Display{#0 state=ON size=1280x2772 ROTATION_0}
+10-08 21:21:12.304 V/WindowManagerShell( 4905): Transition requested (#1144): android.os.BinderProxy@754d7da TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=1534
+effectiveUid=10519 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000
+cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity } baseActivity=null topActivity=null origActivity=null
+realActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} numActivities=0 lastActiveTime=52846377
+supportsSplitScreenMultiWindow=true mSoScDisplayMode=-1 supportsMultiWindow=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=200
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@580840b} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1
+displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true
+isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(328, 822 - 953, 2102)
+capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false
+eligibleForLetterboxEducation= false topActivityInMiuiSizeCompat=false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false
+topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false
+topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=undefined}} isImmersive=false mTopActivityRequestOrientation=-2 mStatusBarParent=null
+mNavBarParent=null mBehindAppLockPkg=null mOriginatingUid=0 isEmbedded=false shouldBeVisible=false isCreatedByOrganizer=false mIsCastMode=false mTopActivityMediaSize=null mTopActivityRecordName=null
+mTopActivityOrientation=-2 topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 1144 }
+10-08 21:21:12.306 I/SoScStageCoordinator( 4905): Transition requested:TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=1534 effectiveUid=10519 displayId=0 isRunning=false
+baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity }
+baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+numActivities=0 lastActiveTime=52846377 supportsSplitScreenMultiWindow=true mSoScDisplayMode=-1 supportsMultiWindow=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=200
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@580840b} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1
+displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true
+isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(328, 822 - 953, 2102)
+capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false
+eligibleForLetterboxEducation= false topActivityInMiuiSizeCompat=false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false
+topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false
+topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=undefined}} isImmersive=false mTopActivityRequestOrientation=-2 mStatusBarParent=null
+mNavBarParent=null mBehindAppLockPkg=null mOriginatingUid=0 isEmbedded=false shouldBeVisible=false isCreatedByOrganizer=false mIsCastMode=false mTopActivityMediaSize=null mTopActivityRecordName=null
+mTopActivityOrientation=-2 topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 1144 } isSoScActive:false triggerTask:TaskInfo{userId=0
+taskId=1534 effectiveUid=10519 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000
+cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity } baseActivity=null topActivity=null origActivity=null
+realActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} numActivities=0 lastActiveTime=52846377
+supportsSplitScreenMultiWindow=true mSoScDisplayMode=-1 supportsMultiWindow=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=200
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@580840b} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1
+displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true
+isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(328, 822 - 953, 2102)
+capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false
+eligibleForLetterboxEducation= f
+10-08 21:21:12.307 I/CameraActivitySceneMode( 3177): decideSceneMode: ActivityStateChange isn't resumend activityName = com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity,
+displayId = 0, state = 3, mIsVideocallResumed = false
+10-08 21:21:12.308 D/Transition( 3177): setReady 1144 wc=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} ready=false
+10-08 21:21:12.308 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.309 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+(mCurrentTopTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : true); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} :
+true); (mHomeTask:Task{174f3da #1 type=home} : false); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.309 I/ANDR-PWR-OPT( 1805): GAMEPOWEROPT: sendEvents() 231: Start hint for app
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity/2126060861, hintID : 4100, hintID hex : 1004 value: -1
+10-08 21:21:12.309 D/WindowManager( 3177): updateSystemBarAttributes displayId: 0 Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} winAppearance=
+10-08 21:21:12.310 I/ANDR-PWR-OPT( 1805): PowerAppClassifier: getAppType() 59: checking app [com.samsung.android.app.watchmanager] is type 1
+10-08 21:21:12.310 I/ANDR-PWR-OPT( 1805): GAMEPOWEROPT: isGame() 348: com.samsung.android.app.watchmanager is Game = 1
+10-08 21:21:12.310 D/WmSystemUiDebug( 3177): on system bar attributes changed displayId=0 appearance= appearanceRegions=[AppearanceRegion{ bounds=[0,0][1280,2772]}] navbarColorManagedByIme=false
+behavior=1 requestedVisibleTypes=[statusBars navigationBars captionBar systemGestures mandatorySystemGestures tappableElement displayCutout windowDecor systemOverlays]
+packageName=com.samsung.android.app.watchmanager letterboxDetails=[]
+10-08 21:21:12.311 D/WindowManager( 3177):    ChangeInfo{e0acc22 container=ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} flags=0x0}
+10-08 21:21:12.311 D/WindowManager( 3177):    ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} flags=0x0}
+10-08 21:21:12.312 D/WindowManager( 3177): wms.Focus not requested for window=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} because it has no surface or is not focusable.
+10-08 21:21:12.317 D/WindowManager( 3177): Collecting in transition 1144: Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} init visibleRequested:false dc:Display{#0 state=ON
+size=1280x2772 ROTATION_0}
+10-08 21:21:12.317 I/ContentCatcher(32214): SettingTrigger : unregister status observer com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity
+10-08 21:21:12.317 I/ActivityTaskManager( 3177): removetask notifyTaskRemoved Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}, call from
+com.android.server.wm.ActivityTaskSupervisor.removeTask:1984 com.android.server.wm.ActivityTaskSupervisor.removeTaskById:1921 com.android.server.wm.AppTaskImpl.finishAndRemoveTask:83
+android.app.IAppTask$Stub.onTransact:116 com.android.server.wm.AppTaskImpl.onTransact:67 android.os.Binder.execTransactInternal:1428 android.os.Binder.execTransact:1372 <bottom of call stack>
+10-08 21:21:12.318 I/ContentCatcher(32214): SettingTrigger : unregisterUIAgentListener com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity, uid:10519
+10-08 21:21:12.318 I/DataHub ( 3177): unregisterUIAgentListener packageName: com.samsung.android.app.watchmanager~10519
+10-08 21:21:12.318 I/RemoteCallbackList( 3177): unregister success, remove callback for com.samsung.android.app.watchmanager~10519
+10-08 21:21:12.320 W/ActivityTaskManager( 3177): callingPackage for (uid=-1, pid=-1) has no WPC
+10-08 21:21:12.322 I/ANDR-PWR-OPT( 1805): GAMEPOWEROPT: sendEvents() 231: Start hint for app com.samsung.android.app.watchmanager, hintID : 4243, hintID hex : 1093 value: 0
+10-08 21:21:12.322 I/ANDR-PWR-OPT( 1805): PowerAppClassifier: getAppType() 59: checking app [com.samsung.android.app.watchmanager] is type 1
+10-08 21:21:12.322 I/ANDR-PWR-OPT( 1805): GAMEPOWEROPT: isGame() 348: com.samsung.android.app.watchmanager is Game = 1
+10-08 21:21:12.324 I/CameraActivitySceneMode( 3177): decideSceneMode: ActivityStateChange isn't resumend activityName = com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity,
+displayId = 0, state = 4, mIsVideocallResumed = false
+10-08 21:21:12.325 I/CameraActivitySceneMode( 3177): decideSceneMode: ActivityStateChange isn't resumend activityName = com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity,
+displayId = 0, state = 5, mIsVideocallResumed = false
+10-08 21:21:12.328 D/BarFollowAnimation( 3177): onTaskInfoChanedForCaptionBar Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} shouldbeVisible:false isVisible:true
+isOnTop:false windowMode:1 preDisplayId:-1 displayId:0 mCaptionAssociatedTask:null mIsTouchedInCaption:false
+10-08 21:21:12.329 D/MiuiMirrorInputMethodImpl( 3177): InsetsControlTarget invalid!:Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+10-08 21:21:12.329 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+(mCurrentTopTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} :
+false); (mHomeTask:Task{174f3da #1 type=home} : true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.331 D/WindowManager( 3177):    ChangeInfo{e0acc22 container=ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} flags=0x0}
+10-08 21:21:12.331 D/WindowManager( 3177):    ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} flags=0x0}
+10-08 21:21:12.332 V/WindowManager( 3177): Win Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}: isOnScreen=true
+mDrawState=4
+10-08 21:21:12.332 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.332 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+(mCurrentTopTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} :
+false); (mHomeTask:Task{174f3da #1 type=home} : true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.334 E/TransitionChain( 3177):    ChangeInfo{e0acc22 container=ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} flags=0x0}
+10-08 21:21:12.334 E/TransitionChain( 3177):    ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} flags=0x0}
+10-08 21:21:12.334 E/TransitionChain( 3177):    ChangeInfo{e0acc22 container=ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} flags=0x0}
+10-08 21:21:12.334 E/TransitionChain( 3177):    ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} flags=0x0}
+10-08 21:21:12.334 D/ActivityTaskManager( 3177):  setSkipCaptureLayers tr: Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}
+10-08 21:21:12.344 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.344 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+(mCurrentTopTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} :
+false); (mHomeTask:Task{174f3da #1 type=home} : true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.345 E/ActivityManagerWrapper( 4273): get all recent tasks force including 2 userId =0
+10-08 21:21:12.347 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.347 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{9085b34 u0 com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+(mCurrentTopTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} :
+false); (mHomeTask:Task{174f3da #1 type=home} : true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.349 D/MiuiMirrorInputMethodImpl( 3177): InsetsControlTarget invalid!:Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}
+10-08 21:21:12.349 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.351 W/ActivityManagerServiceImpl( 3177): Sending non-protected broadcast com.xiaomi.multisence.action.FOCUSED_CHANGE from system 3177:system/1000 pkg android.
+Callers=com.android.server.am.BroadcastController.checkBroadcastFromSystem:2218 com.android.server.am.BroadcastController.broadcastIntentLockedTraced:1703
+com.android.server.am.BroadcastController.broadcastIntentLocked:857 com.android.server.am.BroadcastController.broadcastIntentWithFeature:779
+com.android.server.am.ActivityManagerService.broadcastIntentWithFeature:15952
+10-08 21:21:12.354 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.354 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.355 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.355 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.361 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.361 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273): getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=44
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1289   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{com.android.settings/com.android.settings.MainSettings} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1292   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.openai.chatgpt/com.openai.chatgpt.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1441   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.miui.gallery/com.miui.gallery.activity.HomePageActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1331   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.morphe.android.youtube/app.morphe.android.youtube.morphe_custom_1} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1448   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{vn.com.techcombank.bb.app/com.techcombank.retail.DEFAULT} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1446   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.geto/com.android.geto.activity.main.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1357   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.revenge/com.discord.main.MainAngry} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1442   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=335544320
+cmp=ComponentInfo{com.instagram.android/com.instagram.mainactivity.InstagramMainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1434   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=335544320
+cmp=ComponentInfo{com.android.settings/com.android.settings.Settings$TetherSettingsActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1339   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.ss.android.ugc.trill/com.ss.android.ugc.aweme.splash.SplashActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1438   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1436   userId=999   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=com.zing.zalo.action.ACTION_SHOW_ZALO_VIEW
+flag=335544320 cmp=ComponentInfo{com.zing.zalo/com.zing.zalo.ui.ZaloLauncherActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1433   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.shopee.vn/com.shopee.app.ui.home.HomeActivity_} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1422   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.brave.browser/com.google.android.apps.chrome.Main} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1309   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.fileexplorer/com.android.fileexplorer.FileExplorerTabActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1420   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.hyperosunfcker/com.hyperosunfcker.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1337   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1416   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.contacts/com.android.contacts.activities.TwelveKeyDialer} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1414   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.mbmobile/io.flutter.plugins.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1397   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.metrolist.music/com.metrolist.music.MainActivityAlias} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1362   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{io.github.sds100.keymapper/io.github.sds100.keymapper.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1394   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClockTabActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1391   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{ai.socialapps.speakmaster/com.snapquiz.app.InitActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1334   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.iot.hunonic/com.iot.hunonic.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1387   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{com.goodmooddroid.gestures/com.gmd.gc.view.GestureActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1340   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.anthropic.claude/com.anthropic.claude.mainactivity.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1361   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=335544320
+cmp=ComponentInfo{com.android.vending/com.google.android.finsky.activities.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1368   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.ASSIST flag=318767104
+cmp=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.GoogleAppImplicitActionAssistGatewayInternal} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1358   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.bard/com.google.android.apps.bard.shellapp.BardEntryPointActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1324   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{moe.shizuku.privileged.api/moe.shizuku.manager.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1333   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1329   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1216   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{io.github.samolego.canta/io.github.samolego.canta.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1274   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.SENDTO flag=285212672
+cmp=ComponentInfo{com.android.mms/com.android.mms.ui.activity.phone.activity.SingleRecipientConversationActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1246   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{net.extrawdw.apps.miuisucks.powerkeeper/net.extrawdw.apps.miuisucks.powerkeeper.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1244   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.camera/com.android.camera.Camera} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1219   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{de.szalkowski.activitylauncher/de.szalkowski.activitylauncher.entrypoint.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1218   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=268435456
+cmp=ComponentInfo{com.miui.securitycore/com.miui.miinput.disablebutton.AutoDisableScreenButtonsAppListSettingsActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1179   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.authenticator2/com.google.android.apps.authenticator2.main.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1163   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.h3nc4.hypergesture/com.h3nc4.hypergesture.ui.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1160   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=com.miui.notes.action.VIEW flag=872431616
+cmp=ComponentInfo{com.miui.notes/com.miui.notes.ui.NotesListActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1135   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=352354304
+cmp=ComponentInfo{com.twitter.android/com.twitter.app.main.MainActivity} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1149   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.miui.weather2/com.miui.weather2.ActivityWeatherMain} }
+10-08 21:21:12.364 E/ActivityManagerWrapper( 4273):  mainTaskId=1025   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=app.revenge.manager.intents.actions.INSTALL
+flag=268435456 cmp=ComponentInfo{app.revenge.manager/app.revenge.manager.ui.activity.MainActivity} }
+10-08 21:21:12.368 I/TopActivityMonitor( 8406): send
+TopActivityChangeEvent=TopActivityChangeEvent(prev=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity},
+current=ComponentInfo{com.miui.home/com.miui.home.launcher.Launcher},appChanged=true)
+10-08 21:21:12.369 D/BarFollowAnimation( 3177): pairAppearanceRegionAndWin win=Window{9085b34 u0
+com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} 0
+10-08 21:21:12.370 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:true mLastHomeBarVisible:false
+10-08 21:21:12.372 D/TransitionImpl( 3177): forceAddToTransition Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}
+10-08 21:21:12.372 D/TransitionImpl( 3177): forceAddToTransition Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}
+10-08 21:21:12.372 D/WindowManager( 3177): Final targets: [ChangeInfo{708cb0f container=Task{174f3da #1 type=home} flags=0x30}, ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} flags=0x10}, ChangeInfo{3ab0382 container=WallpaperWindowToken{dd76684 showWhenLocked=false} flags=0x0}]
+10-08 21:21:12.373 I/DynamicIslandService( 3177): elementSurfaceTransition is null for:com.samsung.android.app.watchmanager
+10-08 21:21:12.373 D/DynamicIslandSafeguardsController( 4905): cancelDelayExitApp com.miui.home com.samsung.android.app.watchmanager
+10-08 21:21:12.373 D/WindowManager( 3177): Calling onTransitionReady info={id=1144 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{3ec4d4b Task{174f3da #1 type=home}}} m=TO_FRONT
+f=SHOW_WALLPAPER|MOVE_TO_TOP leash=Surface(name=Task=1#51)/@0x2a983ef sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 taskParent=-1 v=trueMiuiChangeImpl
+{miuiEmbedding:false, scale:1.0}},{WCT{RemoteToken{f9ae2d4 Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}}} m=CLOSE f=NONE leash=Surface(name=Task=1534#19139)/@0x8d7cb9d
+sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 taskParent=-1 v=falseMiuiChangeImpl {miuiEmbedding:false, scale:1.0}},{m=TO_FRONT f=IS_WALLPAPER
+leash=Surface(name=WallpaperWindowToken{dd76684 showWhenLocked=false}#59)/@0x40b0e6d sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 v=trueMiuiChangeImpl
+{miuiEmbedding:false, scale:1.0}}] mk=[false] noAni=[false] df=[false] rsa=[false] oa=[false] nc=[0] ho=[false] hla=[false] iSync=[-1]}, mToken=Token{160bad0 TransitionRecord{32df017 id=1144 type=CLOSE
+flags=0x0 c=[
+10-08 21:21:12.373 D/WindowManager( 3177):    ChangeInfo{e0acc22 container=ActivityRecord{200874612 u0 com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity t1534 f}} flags=0x0}
+10-08 21:21:12.373 D/WindowManager( 3177):    ChangeInfo{91776b3 container=Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} flags=0x10}
+10-08 21:21:12.373 D/PerfEngineController(13344): ForegroundInfo{mForegroundPackageName='com.miui.home', mForegroundUid=10147, mForegroundPid=4273, mForegroundDisplayId=0,
+mLastForegroundPackageName='com.samsung.android.app.watchmanager', mLastForegroundUid=10519, mLastForegroundPid=32214, mLastForegroundDisplayId=0, mMultiWindowForegroundPackageName='com.miui.home',
+mMultiWindowForegroundUid=10147, mFlags=0}
+10-08 21:21:12.374 E/WindowManager( 3177):  source = Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} excludeMiuiNavBar = true excludeMiuiStatusBar = true excludeIme = false
+excludeNavBar = false miuiNavSurfaceControl = Surface(name=NavigationBar Container of Task = 1534#19140)/@0x8350be3 miuiStatusSurfaceControl = Surface(name=StatusBar Container of Task =
+1534#19141)/@0x66a8499
+10-08 21:21:12.374 D/HyperComm_AppMonitor( 4738): onForegroundInfoChanged: foregroundInfo = ForegroundInfo{mForegroundPackageName='com.miui.home', mForegroundUid=10147, mForegroundPid=4273,
+mForegroundDisplayId=0, mLastForegroundPackageName='com.samsung.android.app.watchmanager', mLastForegroundUid=10519, mLastForegroundPid=32214, mLastForegroundDisplayId=0,
+mMultiWindowForegroundPackageName='com.miui.home', mMultiWindowForegroundUid=10147, mFlags=0}
+10-08 21:21:12.375 I/ProcessMonitor( 8566): onForegroundInfoChanged: ForegroundInfo{mForegroundPackageName='com.miui.home', mForegroundUid=10147, mForegroundPid=4273, mForegroundDisplayId=0,
+mLastForegroundPackageName='com.samsung.android.app.watchmanager', mLastForegroundUid=10519, mLastForegroundPid=32214, mLastForegroundDisplayId=0, mMultiWindowForegroundPackageName='com.miui.home',
+mMultiWindowForegroundUid=10147, mFlags=0}
+10-08 21:21:12.375 I/GameAudioEnhancer( 3177): foreground change to com.miui.home, last foreground is com.samsung.android.app.watchmanager
+10-08 21:21:12.375 D/IorapForwardingService( 3177): onForegroundInfoChanged! lastpid: 32214 lastuid: 10519 lastpkn: com.samsung.android.app.watchmanager curpkn: com.miui.home
+10-08 21:21:12.375 D/IorapForwardingService( 3177): pte_snapshot! pid:32214; uid:10519; name:com.samsung.android.app.watchmanager
+10-08 21:21:12.375 I/SurfaceFlinger( 2123): SF-MICapture: mode:0, layerName:com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity#19157
+10-08 21:21:12.375 I/GameBoosterService( 8566): onForegroundInfoChanged: Cur=com.miui.home       last=com.samsung.android.app.watchmanager
+10-08 21:21:12.376 D/BarFollowAnimation( 3177): disableBarAnimation change={WCT{RemoteToken{f9ae2d4 Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}}} m=CLOSE f=NONE
+leash=Surface(name=Task=1534#19139)/@0x8d7cb9d sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 taskParent=-1 v=falseMiuiChangeImpl {miuiEmbedding:false, scale:1.0}} 1 1
+10-08 21:21:12.376 D/BarFollowAnimation( 3177): startStatusBarAnimation change= {WCT{RemoteToken{f9ae2d4 Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}}} m=CLOSE f=NONE
+leash=Surface(name=Task=1534#19139)/@0x8d7cb9d sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 taskParent=-1 v=falseMiuiChangeImpl {miuiEmbedding:false, scale:1.0}}
+isRecent=false startWindowMode=1 endWindowMode=1 statusState=-1 isRotationAnimation=false
+10-08 21:21:12.377 D/WindowTransitionCompat( 4273):  printLeash::taskInfo = TaskInfo{userId=0 taskId=1534 effectiveUid=10519 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN
+cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity } baseActivity=null topActivity=null origActivity=null
+realActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} numActivities=0 lastActiveTime=52854038
+supportsSplitScreenMultiWindow=true mSoScDisplayMode=-1 supportsMultiWindow=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=200
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@f72cce7} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1
+displayCutoutSafeInsets=Rect(0, 152 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=true isVisibleRequested=false
+isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(328, 822 - 953, 2102)
+capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false
+eligibleForLetterboxEducation= false topActivityInMiuiSizeCompat=false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false
+topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false
+topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=undefined}} isImmersive=false mTopActivityRequestOrientation=-2 mStatusBarParent=null
+mNavBarParent=null mBehindAppLockPkg=null mOriginatingUid=0 isEmbedded=false shouldBeVisible=false isCreatedByOrganizer=false mIsCastMode=false mTopActivityMediaSize=null mTopActivityRecordName=null
+mTopActivityOrientation=-2 topActivityMainWindowFrame=null}
+10-08 21:21:12.378 D/BluetoothLatencyMode( 4555): ForegroundInfo{mForegroundPackageName='com.miui.home', mForegroundUid=10147, mForegroundPid=4273, mForegroundDisplayId=0,
+mLastForegroundPackageName='com.samsung.android.app.watchmanager', mLastForegroundUid=10519, mLastForegroundPid=32214, mLastForegroundDisplayId=0, mMultiWindowForegroundPackageName='com.miui.home',
+mMultiWindowForegroundUid=10147, mFlags=0}
+10-08 21:21:12.378 D/TransitionUtil( 4273): get key :ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}#1534
+10-08 21:21:12.379 D/GameBoosterService( 8566): onGameStatusChange foreground:ForegroundInfo{mForegroundPackageName='com.miui.home', mForegroundUid=10147, mForegroundPid=4273, mForegroundDisplayId=0,
+mLastForegroundPackageName='com.samsung.android.app.watchmanager', mLastForegroundUid=10519, mLastForegroundPid=32214, mLastForegroundDisplayId=0, mMultiWindowForegroundPackageName='com.miui.home',
+mMultiWindowForegroundUid=10147, mFlags=0}
+10-08 21:21:12.384 D/WindowManager( 3177): snapshot isNothing = false source = Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}
+10-08 21:21:12.384 I/AudioGameEffect( 3177): foreground change to com.miui.home, last foreground is com.samsung.android.app.watchmanager
+10-08 21:21:12.385 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:false mLastHomeBarVisible:true
+10-08 21:21:12.388 V/WindowManager( 3177): Sent Transition (#1144) createdAt=10-08 21:21:12.295 via request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=1534
+effectiveUid=10519 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000
+cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity } baseActivity=null topActivity=null origActivity=null
+realActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} numActivities=0 lastActiveTime=52846377
+supportsSplitScreenMultiWindow=true mSoScDisplayMode=-1 supportsMultiWindow=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=200 token=WCT{RemoteToken{f9ae2d4 Task{c59b812 #1534
+type=standard A=10519:com.samsung.android.app.watchmanager}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1
+displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true
+isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(328, 822 - 953, 2102)
+capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false
+eligibleForLetterboxEducation= false topActivityInMiuiSizeCompat=false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false
+topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false
+topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=undefined}} isImmersive=false mTopActivityRequestOrientation=-2 mStatusBarParent=null
+mNavBarParent=null mBehindAppLockPkg=null mOriginatingUid=0 isEmbedded=false shouldBeVisible=false isCreatedByOrganizer=false mIsCastMode=false mTopActivityMediaSize=null mTopActivityRecordName=null
+mTopActivityOrientation=-2 topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 1144 }
+10-08 21:21:12.388 V/WindowManager( 3177):         {WCT{RemoteToken{f9ae2d4 Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}}} m=CLOSE f=NONE
+leash=Surface(name=Task=1534#19139)/@0x8d7cb9d sb=Rect(0, 0 - 1280, 2772) eb=Rect(0, 0 - 1280, 2772) epz=Point(1280, 2772) d=0 taskParent=-1 v=falseMiuiChangeImpl {miuiEmbedding:false, scale:1.0}},
+10-08 21:21:12.389 W/ActivityTaskManager( 3177): setRunningRemoteTransition: no process for null
+10-08 21:21:12.390 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:false mLastHomeBarVisible:true
+10-08 21:21:12.391 I/WindowElement9a1eeef( 4273): MAIN_THREAD:onClosingWindowTransitionStart closingTarget=RemoteAnimationTargetCompat{taskId=1534, mode=1, isTranslucent=false, clipRect=Rect(0, 0 - 0, 0),
+position=Point(0, 0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=2, isNotInRecents=true, contentInsets=Rect(0, 0 - 0, 0), activityType=1,
+packageName=com.samsung.android.app.watchmanager, startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}, closingTargets.homeTarget=RemoteAnimationTargetCompat{taskId=1, mode=0, isTranslucent=false,
+clipRect=Rect(0, 0 - 0, 0), position=Point(0, 0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=3, isNotInRecents=false, contentInsets=Rect(0, 0 - 0, 0), activityType=2,
+packageName=com.miui.home, startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}
+10-08 21:21:12.391 V/ActivityTaskManager( 3177): wms.updateAllDrawn allDrawn: ActivityRecord{10922652 u0 com.miui.home/.launcher.Launcher t2} interesting=3 drawn=3
+10-08 21:21:12.391 I/WindowAnimParamsProvider( 4273): getClosingWindowAnimParams closingTarget=RemoteAnimationTargetCompat{taskId=1534, mode=1, isTranslucent=false, clipRect=Rect(0, 0 - 0, 0),
+position=Point(0, 0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=2, isNotInRecents=true, contentInsets=Rect(0, 0 - 0, 0), activityType=1,
+packageName=com.samsung.android.app.watchmanager, startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}, closingTargets.homeTarget=RemoteAnimationTargetCompat{taskId=1, mode=0, isTranslucent=false,
+clipRect=Rect(0, 0 - 0, 0), position=Point(0, 0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=3, isNotInRecents=false, contentInsets=Rect(0, 0 - 0, 0), activityType=2,
+packageName=com.miui.home, startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}, closingTargets.secondTarget=null
+10-08 21:21:12.391 I/WindowAnimParamsProvider( 4273): getClosingWindowAnimParams target =RemoteAnimationTargetCompat{taskId=1534, mode=1, isTranslucent=false, clipRect=Rect(0, 0 - 0, 0), position=Point(0,
+0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=2, isNotInRecents=true, contentInsets=Rect(0, 0 - 0, 0), activityType=1, packageName=com.samsung.android.app.watchmanager,
+startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}
+10-08 21:21:12.392 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:false mLastHomeBarVisible:true
+10-08 21:21:12.392 I/WindowAnimParamsProvider( 4273): getClosingWindowAnimParams getClosingShortcutIcon target= RemoteAnimationTargetCompat{taskId=1534, mode=1, isTranslucent=false, clipRect=Rect(0, 0 -
+0, 0), position=Point(0, 0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=2, isNotInRecents=true, contentInsets=Rect(0, 0 - 0, 0), activityType=1,
+packageName=com.samsung.android.app.watchmanager, startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}
+10-08 21:21:12.392 I/WindowAnimParamsProvider( 4273): getClosingWindowAnimParams getClosingShortcutIcon task before=  [TaskKey{id=1534, stackId=0, baseIntent=Intent { act=android.intent.action.MAIN
+cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity }, userId=0, lastActiveTime=52846377, windowingMode=1,
+isThumbnailBlur=false, isAccessLocked=false, isScreening=false, topActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity},
+mHashCode=46622946}, title=Galaxy Wearable, titleDescription=Galaxy Wearable, bounds=null, isLaunchTarget=true, isStackTask=true, isSystemApp=false, isDockable=true,
+baseActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}, isLocked=false, mNeedHide=false, hasMultipleTasks=false,
+cti1Key=, cti2Key=, cti1Task=, cti2Task=]
+10-08 21:21:12.392 I/WindowAnimParamsProvider( 4273): getClosingWindowAnimParams getClosingShortcutIcon task after=  [TaskKey{id=1534, stackId=0, baseIntent=Intent { act=android.intent.action.MAIN
+cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity }, userId=0, lastActiveTime=52846377, windowingMode=1,
+isThumbnailBlur=false, isAccessLocked=false, isScreening=false, topActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity},
+mHashCode=46622946}, title=Galaxy Wearable, titleDescription=Galaxy Wearable, bounds=null, isLaunchTarget=true, isStackTask=true, isSystemApp=false, isDockable=true,
+baseActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}, isLocked=false, mNeedHide=false, hasMultipleTasks=false,
+cti1Key=, cti2Key=, cti1Task=, cti2Task=]
+10-08 21:21:12.392 D/WindowAnimParamsProvider( 4273): getClosingShortcutIcon:CloseShortcutIconUtils.getCloseShortcutIcon
+cn=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity} userId=0 currentUserId=0
+10-08 21:21:12.393 I/WindowAnimParamsProvider( 4273): getUserIdFromRemoteTarget target= RemoteAnimationTargetCompat{taskId=1534, mode=1, isTranslucent=false, clipRect=Rect(0, 0 - 0, 0), position=Point(0,
+0), sourceContainerBounds=Rect(0, 0 - 1280, 2772), prefixOrderIndex=2, isNotInRecents=true, contentInsets=Rect(0, 0 - 0, 0), activityType=1, packageName=com.samsung.android.app.watchmanager,
+startBounds=Rect(0, 0 - 1280, 2772), windowType=-1}
+10-08 21:21:12.393 I/WindowAnimParamsProvider( 4273): getUserIdFromRemoteTarget task before=  [TaskKey{id=1534, stackId=0, baseIntent=Intent { act=android.intent.action.MAIN
+cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity }, userId=0, lastActiveTime=52846377, windowingMode=1,
+isThumbnailBlur=false, isAccessLocked=false, isScreening=false, topActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity},
+mHashCode=46622946}, title=Galaxy Wearable, titleDescription=Galaxy Wearable, bounds=null, isLaunchTarget=true, isStackTask=true, isSystemApp=false, isDockable=true,
+baseActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}, isLocked=false, mNeedHide=false, hasMultipleTasks=false,
+cti1Key=, cti2Key=, cti1Task=, cti2Task=]
+10-08 21:21:12.393 I/WindowAnimParamsProvider( 4273): getUserIdFromRemoteTarget task after=  [TaskKey{id=1534, stackId=0, baseIntent=Intent { act=android.intent.action.MAIN
+cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.samsung.android.app.watchmanager/.setupwizard.SetupWizardWelcomeActivity }, userId=0, lastActiveTime=52846377, windowingMode=1,
+isThumbnailBlur=false, isAccessLocked=false, isScreening=false, topActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity},
+mHashCode=46622946}, title=Galaxy Wearable, titleDescription=Galaxy Wearable, bounds=null, isLaunchTarget=true, isStackTask=true, isSystemApp=false, isDockable=true,
+baseActivity=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}, isLocked=false, mNeedHide=false, hasMultipleTasks=false,
+cti1Key=, cti2Key=, cti1Task=, cti2Task=]
+10-08 21:21:12.393 D/WindowAnimParamsProvider( 4273): getUserIdFromRemoteTarget
+cn=ComponentInfo{com.samsung.android.app.watchmanager/com.samsung.android.app.watchmanager.setupwizard.SetupWizardWelcomeActivity}   userId=0
+10-08 21:21:12.394 D/FloatingIconView28dfe956( 4273): init addView: com.samsung.android.app.watchmanager, index: 2, rootView:com.miui.home.launcher.StrictFrameLayout{fbcbec9 V.E...... ......ID
+0,0-1280,2772}
+10-08 21:21:12.396 D/ActivityTaskManager( 3177):  setSkipCaptureLayers tr: Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager}
+10-08 21:21:12.403 E/ActivityManagerWrapper( 4273): get all recent tasks force including 2 userId =0
+10-08 21:21:12.409 I/BeautyService( 8566): onForegroundInfoChanged: Cur=com.miui.home    last=com.samsung.android.app.watchmanager
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273): getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=44
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1289   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{com.android.settings/com.android.settings.MainSettings} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1292   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.openai.chatgpt/com.openai.chatgpt.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1441   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.miui.gallery/com.miui.gallery.activity.HomePageActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1331   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.morphe.android.youtube/app.morphe.android.youtube.morphe_custom_1} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1448   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{vn.com.techcombank.bb.app/com.techcombank.retail.DEFAULT} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1446   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.geto/com.android.geto.activity.main.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1357   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.revenge/com.discord.main.MainAngry} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1442   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=335544320
+cmp=ComponentInfo{com.instagram.android/com.instagram.mainactivity.InstagramMainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1434   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=335544320
+cmp=ComponentInfo{com.android.settings/com.android.settings.Settings$TetherSettingsActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1339   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.ss.android.ugc.trill/com.ss.android.ugc.aweme.splash.SplashActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1438   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1436   userId=999   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=com.zing.zalo.action.ACTION_SHOW_ZALO_VIEW
+flag=335544320 cmp=ComponentInfo{com.zing.zalo/com.zing.zalo.ui.ZaloLauncherActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1433   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.shopee.vn/com.shopee.app.ui.home.HomeActivity_} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1422   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.brave.browser/com.google.android.apps.chrome.Main} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1309   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.fileexplorer/com.android.fileexplorer.FileExplorerTabActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1420   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.hyperosunfcker/com.hyperosunfcker.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1337   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1416   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.contacts/com.android.contacts.activities.TwelveKeyDialer} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1414   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.mbmobile/io.flutter.plugins.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1397   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.metrolist.music/com.metrolist.music.MainActivityAlias} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1362   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{io.github.sds100.keymapper/io.github.sds100.keymapper.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1394   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClockTabActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1391   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{ai.socialapps.speakmaster/com.snapquiz.app.InitActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1334   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.iot.hunonic/com.iot.hunonic.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1387   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{com.goodmooddroid.gestures/com.gmd.gc.view.GestureActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1340   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.anthropic.claude/com.anthropic.claude.mainactivity.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1361   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=335544320
+cmp=ComponentInfo{com.android.vending/com.google.android.finsky.activities.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1368   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.ASSIST flag=318767104
+cmp=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.GoogleAppImplicitActionAssistGatewayInternal} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1358   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.bard/com.google.android.apps.bard.shellapp.BardEntryPointActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1324   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{moe.shizuku.privileged.api/moe.shizuku.manager.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1333   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1329   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1216   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{io.github.samolego.canta/io.github.samolego.canta.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1274   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.SENDTO flag=285212672
+cmp=ComponentInfo{com.android.mms/com.android.mms.ui.activity.phone.activity.SingleRecipientConversationActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1246   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{net.extrawdw.apps.miuisucks.powerkeeper/net.extrawdw.apps.miuisucks.powerkeeper.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1244   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.camera/com.android.camera.Camera} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1219   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{de.szalkowski.activitylauncher/de.szalkowski.activitylauncher.entrypoint.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1218   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=268435456
+cmp=ComponentInfo{com.miui.securitycore/com.miui.miinput.disablebutton.AutoDisableScreenButtonsAppListSettingsActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1179   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.authenticator2/com.google.android.apps.authenticator2.main.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1163   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.h3nc4.hypergesture/com.h3nc4.hypergesture.ui.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1160   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=com.miui.notes.action.VIEW flag=872431616
+cmp=ComponentInfo{com.miui.notes/com.miui.notes.ui.NotesListActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1135   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=352354304
+cmp=ComponentInfo{com.twitter.android/com.twitter.app.main.MainActivity} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1149   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.miui.weather2/com.miui.weather2.ActivityWeatherMain} }
+10-08 21:21:12.409 E/ActivityManagerWrapper( 4273):  mainTaskId=1025   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=app.revenge.manager.intents.actions.INSTALL
+flag=268435456 cmp=ComponentInfo{app.revenge.manager/app.revenge.manager.ui.activity.MainActivity} }
+10-08 21:21:12.412 D/BarFollowAnimation( 3177): isAppTaskBarOnTop win:Window{885035b u0 com.miui.home/com.miui.home.launcher.Launcher} (mCurrentTopTask:Task{c59b812 #1534 type=standard
+A=10519:com.samsung.android.app.watchmanager} : false); (mAssociatedTask:Task{c59b812 #1534 type=standard A=10519:com.samsung.android.app.watchmanager} : false); (mHomeTask:Task{174f3da #1 type=home} :
+true); mReparentToOriginParent:false mLastAppBarVisible:false mLastHomeBarVisible:true
+10-08 21:21:12.434 E/ActivityManagerWrapper( 4273): get all recent tasks force including 2 userId =0
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273): getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=44
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1289   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{com.android.settings/com.android.settings.MainSettings} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1292   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.openai.chatgpt/com.openai.chatgpt.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1441   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.miui.gallery/com.miui.gallery.activity.HomePageActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1331   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.morphe.android.youtube/app.morphe.android.youtube.morphe_custom_1} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1448   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{vn.com.techcombank.bb.app/com.techcombank.retail.DEFAULT} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1446   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.geto/com.android.geto.activity.main.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1357   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{app.revenge/com.discord.main.MainAngry} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1442   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=335544320
+cmp=ComponentInfo{com.instagram.android/com.instagram.mainactivity.InstagramMainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1434   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=335544320
+cmp=ComponentInfo{com.android.settings/com.android.settings.Settings$TetherSettingsActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1339   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.ss.android.ugc.trill/com.ss.android.ugc.aweme.splash.SplashActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1438   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1436   userId=999   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=com.zing.zalo.action.ACTION_SHOW_ZALO_VIEW
+flag=335544320 cmp=ComponentInfo{com.zing.zalo/com.zing.zalo.ui.ZaloLauncherActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1433   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.shopee.vn/com.shopee.app.ui.home.HomeActivity_} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1422   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.brave.browser/com.google.android.apps.chrome.Main} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1309   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.fileexplorer/com.android.fileexplorer.FileExplorerTabActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1420   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.hyperosunfcker/com.hyperosunfcker.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1337   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1416   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.android.contacts/com.android.contacts.activities.TwelveKeyDialer} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1414   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.mbmobile/io.flutter.plugins.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1397   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.metrolist.music/com.metrolist.music.MainActivityAlias} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1362   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{io.github.sds100.keymapper/io.github.sds100.keymapper.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1394   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClockTabActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1391   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{ai.socialapps.speakmaster/com.snapquiz.app.InitActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1334   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.iot.hunonic/com.iot.hunonic.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1387   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=268435456
+cmp=ComponentInfo{com.goodmooddroid.gestures/com.gmd.gc.view.GestureActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1340   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.anthropic.claude/com.anthropic.claude.mainactivity.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1361   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=335544320
+cmp=ComponentInfo{com.android.vending/com.google.android.finsky.activities.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1368   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.ASSIST flag=318767104
+cmp=ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.GoogleAppImplicitActionAssistGatewayInternal} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1358   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.bard/com.google.android.apps.bard.shellapp.BardEntryPointActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1324   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=271581184
+cmp=ComponentInfo{moe.shizuku.privileged.api/moe.shizuku.manager.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1333   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=287309824
+cmp=ComponentInfo{com.facebook.orca/com.facebook.orca.auth.StartScreenActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1329   userId=0   windowMode=1   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.VIEW flag=268959745
+cmp=ComponentInfo{com.google.android.apps.docs.editors.sheets/com.google.android.apps.docs.editors.ritz.RitzActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1216   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{io.github.samolego.canta/io.github.samolego.canta.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1274   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.SENDTO flag=285212672
+cmp=ComponentInfo{com.android.mms/com.android.mms.ui.activity.phone.activity.SingleRecipientConversationActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1246   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{net.extrawdw.apps.miuisucks.powerkeeper/net.extrawdw.apps.miuisucks.powerkeeper.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1244   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.android.camera/com.android.camera.Camera} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1219   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{de.szalkowski.activitylauncher/de.szalkowski.activitylauncher.entrypoint.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1218   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=268435456
+cmp=ComponentInfo{com.miui.securitycore/com.miui.miinput.disablebutton.AutoDisableScreenButtonsAppListSettingsActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1179   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.google.android.apps.authenticator2/com.google.android.apps.authenticator2.main.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1163   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.h3nc4.hypergesture/com.h3nc4.hypergesture.ui.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1160   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=com.miui.notes.action.VIEW flag=872431616
+cmp=ComponentInfo{com.miui.notes/com.miui.notes.ui.NotesListActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1135   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=null flag=352354304
+cmp=ComponentInfo{com.twitter.android/com.twitter.app.main.MainActivity} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1149   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608
+cmp=ComponentInfo{com.miui.weather2/com.miui.weather2.ActivityWeatherMain} }
+10-08 21:21:12.443 E/ActivityManagerWrapper( 4273):  mainTaskId=1025   userId=0   windowMode=0   isExcludedFromRecents=false   baseIntent=Intent { act=app.revenge.manager.intents.actions.INSTALL
+flag=268435456 cmp=ComponentInfo{app.revenge.manager/app.revenge.manager.ui.activity.MainActivity} }
+PS C:\Users\tiohm> adb shell dumpsys activity activities |
+>>     Select-String "com.samsung.android.app.watchmanager|SetupWizardWelcomeActivity" -Context 3,8
